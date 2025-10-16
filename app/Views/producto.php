@@ -1,19 +1,14 @@
 <?php $this->layout('layout', ['title' => $producto['nombre'], 'description' => $producto['descripcion'] ?? 'Delicioso producto de Tacos Capital']) ?>
 
-<!-- Elementos decorativos de fondo -->
-<div class="fixed inset-0 overflow-hidden pointer-events-none">
-    <div class="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-blue-400/10 to-purple-600/10 rounded-full blur-3xl parallax" data-speed="0.2"></div>
-    <div class="absolute -bottom-40 -left-40 w-96 h-96 bg-gradient-to-tr from-green-400/10 to-blue-600/10 rounded-full blur-3xl parallax" data-speed="0.3"></div>
-    <div class="absolute top-1/2 left-1/4 w-32 h-32 bg-gradient-to-r from-yellow-400/5 to-orange-600/5 rounded-full blur-2xl parallax" data-speed="0.1"></div>
-</div>
+
 
 <!-- Contenedor de partículas -->
-<div class="particles-container fixed inset-0 pointer-events-none"></div>
+
 
 <!-- Breadcrumb -->
-<nav class="bg-white/80 backdrop-blur-sm border-b border-gray-200 py-4 relative z-10" aria-label="breadcrumb">
+<nav class="bg-white border-b border-gray-200 py-4 relative z-10" aria-label="breadcrumb">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <ol class="flex items-center space-x-2 text-sm bg-white/80 backdrop-blur-sm rounded-full px-4 py-2 shadow-lg">
+    <ol class="flex items-center space-x-2 text-sm bg-gray-50 rounded px-4 py-2">
       <li>
         <a href="/" class="text-gray-500 hover:text-primary-600 transition-all duration-300 hover:scale-105">
           🏠 <i class="fas fa-home"></i>
@@ -30,62 +25,40 @@
 </nav>
 
 <div class="bg-white">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-8">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12">
       
       <!-- Galería de imágenes -->
-      <div class="space-y-4 fade-in-left">
+      <div class="space-y-3 sm:space-y-4">
         <?php if (!empty($producto['imagenes'])): ?>
-          <!-- Imagen principal con efectos mejorados -->
-          <div class="relative group">
-            <!-- Elementos decorativos alrededor de la imagen -->
-            <div class="absolute -inset-4 bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
-            <div class="absolute -top-2 -right-2 w-8 h-8 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-full animate-pulse"></div>
-            <div class="absolute -bottom-2 -left-2 w-6 h-6 bg-gradient-to-br from-green-400 to-blue-500 rounded-full animate-bounce"></div>
-            
-            <div class="aspect-square bg-gradient-to-br from-gray-50 to-gray-100 rounded-2xl overflow-hidden shadow-2xl relative">
+          <!-- Imagen principal -->
+          <div class="relative">
+            <div class="aspect-square bg-gray-100 rounded-lg overflow-hidden shadow-lg relative">
               <img src="<?= htmlspecialchars($producto['imagenes'][0]['url']) ?>" 
                    alt="<?= htmlspecialchars($producto['nombre']) ?>" 
                    id="mainImage"
-                   class="w-full h-full object-cover group-hover:scale-110 transition-all duration-700 hover-glow">
+                   class="w-full h-full object-cover">
               
-              <!-- Badge de Producto Destacado con animación -->
+              <!-- Badge de Producto Destacado -->
               <?php if ($producto['destacado']): ?>
-                <div class="absolute top-4 left-4 bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-4 py-2 rounded-full text-sm font-semibold shadow-lg animate-shimmer">
-                  ⭐ Producto Destacado
+                <div class="absolute top-2 sm:top-4 left-2 sm:left-4 bg-yellow-500 text-white px-2 sm:px-4 py-1 sm:py-2 rounded text-xs sm:text-sm font-semibold">
+                  ⭐ <span class="hidden sm:inline">Producto </span>Destacado
                 </div>
               <?php endif; ?>
               
               <!-- Badge de stock -->
-              <div class="absolute top-4 right-4 <?= $producto['stock'] > 0 ? 'bg-green-500' : 'bg-red-500' ?> text-white px-3 py-1 rounded-full text-xs font-medium shadow-lg">
+              <div class="absolute top-2 sm:top-4 right-2 sm:right-4 <?= $producto['stock'] > 0 ? 'bg-green-500' : 'bg-red-500' ?> text-white px-2 sm:px-3 py-1 rounded text-xs font-medium">
                 <?= $producto['stock'] > 0 ? '✅ En Stock' : '❌ Sin Stock' ?>
               </div>
-              
-              <!-- Overlay con efectos mejorados -->
-              <div class="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
-              
-              <!-- Botones de acción rápida en hover -->
-              <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
-                <div class="flex space-x-3">
-                  <button class="bg-white/90 backdrop-blur-sm text-gray-800 p-3 rounded-full shadow-lg hover:scale-110 transition-transform">
-                    🔍
-                  </button>
-                  <button class="bg-white/90 backdrop-blur-sm text-gray-800 p-3 rounded-full shadow-lg hover:scale-110 transition-transform">
-                    ❤️
-                  </button>
-                  <button onclick="shareProduct()" class="bg-white/90 backdrop-blur-sm text-gray-800 p-3 rounded-full shadow-lg hover:scale-110 transition-transform">
-                    📤
-                  </button>
-                </div>
-              </div>
+
             </div>
           </div>
           
-          <!-- Miniaturas mejoradas -->
+          <!-- Miniaturas -->
           <?php if (count($producto['imagenes']) > 1): ?>
-            <div class="grid grid-cols-4 gap-3 mt-6">
+            <div class="grid grid-cols-3 sm:grid-cols-4 gap-2 sm:gap-3 mt-4 sm:mt-6">
               <?php foreach ($producto['imagenes'] as $index => $imagen): ?>
-                <button class="aspect-square bg-gradient-to-br from-gray-100 to-gray-200 rounded-xl overflow-hidden border-3 transition-all duration-300 hover-lift cursor-pointer <?= $index === 0 ? 'border-blue-500 shadow-lg' : 'border-gray-300 opacity-70 hover:opacity-100 hover:border-blue-400' ?>"
+                <button class="aspect-square bg-gray-100 rounded overflow-hidden border-2 cursor-pointer transition-all hover:border-blue-400 <?= $index === 0 ? 'border-blue-500' : 'border-gray-300' ?>"
                         onclick="changeMainImage('<?= htmlspecialchars($imagen['url']) ?>', this, <?= $index ?>)">
                   <img src="<?= htmlspecialchars($imagen['url']) ?>" 
                        alt="<?= htmlspecialchars($producto['nombre']) ?>" 
@@ -97,11 +70,11 @@
           
           <!-- Videos -->
           <?php if (!empty($producto['videos'])): ?>
-            <div class="mt-6">
-              <h3 class="text-lg font-semibold text-gray-900 mb-3">Videos del producto</h3>
-              <div class="space-y-4">
+            <div class="mt-4 sm:mt-6">
+              <h3 class="text-base sm:text-lg font-semibold text-gray-900 mb-3">Videos del producto</h3>
+              <div class="space-y-3 sm:space-y-4">
                 <?php foreach ($producto['videos'] as $video): ?>
-                  <div class="aspect-video bg-gray-100 rounded-xl overflow-hidden shadow-md">
+                  <div class="aspect-video bg-gray-100 rounded-lg sm:rounded-xl overflow-hidden shadow-md">
                     <video controls class="w-full h-full">
                       <source src="<?= htmlspecialchars($video['url']) ?>" type="video/mp4">
                       Tu navegador no soporta el elemento de video.
@@ -113,24 +86,21 @@
           <?php endif; ?>
         <?php else: ?>
           <!-- Placeholder si no hay imágenes -->
-          <div class="aspect-square bg-gray-100 rounded-2xl flex items-center justify-center">
+          <div class="aspect-square bg-gray-100 rounded-lg sm:rounded-2xl flex items-center justify-center">
             <div class="text-center text-gray-400">
-              <i class="fas fa-image text-6xl mb-4"></i>
-              <p>Sin imagen disponible</p>
+              <i class="fas fa-image text-4xl sm:text-6xl mb-2 sm:mb-4"></i>
+              <p class="text-sm sm:text-base">Sin imagen disponible</p>
             </div>
           </div>
         <?php endif; ?>
       </div>
 
       <!-- Información del producto -->
-      <div class="space-y-6 fade-in-right">
-        <!-- Elementos decorativos -->
-        <div class="absolute -top-8 -right-8 w-32 h-32 bg-gradient-to-br from-blue-400/10 to-purple-600/10 rounded-full blur-2xl"></div>
-        <div class="absolute -bottom-8 -left-8 w-24 h-24 bg-gradient-to-tr from-green-400/10 to-blue-600/10 rounded-full blur-xl"></div>
+      <div class="space-y-6">
         
         <!-- Título y precio -->
         <div class="relative">
-          <div class="bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-xl border border-gray-100">
+          <div class="bg-white rounded-lg p-4 sm:p-6 lg:p-8 shadow-lg border border-gray-100">
             <?php if ($producto['destacado']): ?>
               <div class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-yellow-100 text-yellow-800 mb-3">
                 <i class="fas fa-star mr-1"></i>
@@ -138,28 +108,27 @@
               </div>
             <?php endif; ?>
             
-            <h1 class="text-4xl font-bold bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent mb-6 typewriter leading-tight">
+            <h1 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4 sm:mb-6 leading-tight">
               <?= htmlspecialchars($producto['nombre']) ?>
             </h1>
             
-            <div class="flex items-center space-x-6 mb-6">
+            <div class="flex flex-col sm:flex-row sm:items-center space-y-4 sm:space-y-0 sm:space-x-6 mb-6">
               <div class="relative">
-                <span class="text-5xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                <span class="text-3xl sm:text-4xl lg:text-5xl font-bold text-blue-600">
                   $<?= $producto['precio_formateado'] ?>
                 </span>
-                <div class="absolute -inset-2 bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-lg blur-lg opacity-50"></div>
               </div>
               <div class="flex flex-col space-y-2">
                 <?php if (isset($producto['categoria_nombre'])): ?>
-                  <span class="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-medium shadow-lg hover:scale-105 transition-transform">
+                  <span class="bg-blue-500 text-white px-3 sm:px-4 py-1 sm:py-2 rounded text-xs sm:text-sm font-medium inline-block w-fit">
                     🎱 <?= htmlspecialchars($producto['categoria_nombre']) ?>
                   </span>
                 <?php endif; ?>
                 <div class="flex items-center space-x-2">
-                  <div class="flex text-yellow-400">
+                  <div class="flex text-yellow-400 text-sm sm:text-base">
                     ⭐⭐⭐⭐⭐
                   </div>
-                  <span class="text-sm text-gray-600">(4.8/5)</span>
+                  <span class="text-xs sm:text-sm text-gray-600">(4.8/5)</span>
                 </div>
               </div>
             </div>
@@ -189,46 +158,47 @@
         </div>
 
         <!-- Botones de acción -->
-        <div class="space-y-4">
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div class="space-y-3 sm:space-y-4">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
             <a href="https://wa.me/573188763377?text=Hola, me interesa el producto: <?= urlencode($producto['nombre']) ?> - $<?= $producto['precio_formateado'] ?>" 
-               class="flex items-center justify-center px-6 py-3 bg-green-600 text-white font-semibold rounded-xl hover:bg-green-700 transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 duration-200"
+               class="flex items-center justify-center px-4 sm:px-6 py-3 bg-green-600 hover:bg-green-700 text-white font-semibold rounded-lg transition-colors text-sm sm:text-base"
                target="_blank">
               <i class="fab fa-whatsapp mr-2 text-lg"></i>
-              Consultar por WhatsApp
+              <span class="hidden sm:inline">Consultar por WhatsApp</span>
+              <span class="sm:hidden">WhatsApp</span>
             </a>
             
             <a href="https://wa.me/573188763377?text=Hola, quiero comprar: <?= urlencode($producto['nombre']) ?> - $<?= $producto['precio_formateado'] ?>" 
                target="_blank"
-               class="flex items-center justify-center px-6 py-3 gradient-bg text-white font-semibold rounded-xl hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200">
+               class="flex items-center justify-center px-4 sm:px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-colors text-sm sm:text-base">
               <i class="fas fa-shopping-cart mr-2"></i>
               Comprar Ahora
             </a>
           </div>
           
           <button onclick="shareProduct()"
-                  class="w-full flex items-center justify-center px-6 py-3 border-2 border-primary-600 text-primary-600 font-semibold rounded-xl hover:bg-primary-50 transition-colors">
+                  class="w-full flex items-center justify-center px-4 sm:px-6 py-3 border-2 border-blue-600 text-blue-600 hover:bg-blue-50 font-semibold rounded-lg transition-colors text-sm sm:text-base">
             <i class="fas fa-share-alt mr-2"></i>
             Compartir producto
           </button>
         </div>
 
         <!-- Información adicional -->
-        <div class="bg-gradient-to-r from-blue-50 to-indigo-50 p-6 rounded-xl border border-blue-200">
-          <h3 class="text-lg font-semibold text-blue-800 mb-4 flex items-center">
+        <div class="bg-blue-50 p-4 sm:p-6 rounded-lg border border-blue-200">
+          <h3 class="text-base sm:text-lg font-semibold text-blue-800 mb-3 sm:mb-4 flex items-center">
             <span class="mr-2">🎱</span>
             Información adicional
           </h3>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div class="flex items-center text-blue-700">
-              <span class="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
+            <div class="flex items-center text-blue-700 text-sm sm:text-base">
+              <span class="w-2 h-2 bg-blue-500 rounded-full mr-3 flex-shrink-0"></span>
               Envío a toda Colombia
             </div>
-            <div class="flex items-center text-blue-700">
-              <span class="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
+            <div class="flex items-center text-blue-700 text-sm sm:text-base">
+              <span class="w-2 h-2 bg-blue-500 rounded-full mr-3 flex-shrink-0"></span>
               Garantía de fabricación
             </div>
-            <div class="flex items-center text-blue-700">
+            <div class="flex items-center text-blue-700 text-sm sm:text-base">
               <span class="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
               Fabricación artesanal
             </div>
@@ -259,19 +229,19 @@
       <div class="border-b border-gray-200">
         <nav class="flex space-x-8 px-6" aria-label="Tabs">
           <button onclick="showTab('ingredients')" 
-                  class="tab-btn py-4 px-1 border-b-2 font-medium text-sm transition-colors border-primary-500 text-primary-600"
+                  class="tab-btn py-4 px-1 border-b-2 font-medium text-sm border-blue-500 text-blue-600"
                   data-tab="ingredients">
             <i class="fas fa-cog mr-2"></i>
             Especificaciones
           </button>
           <button onclick="showTab('nutrition')" 
-                  class="tab-btn py-4 px-1 border-b-2 font-medium text-sm transition-colors border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300"
+                  class="tab-btn py-4 px-1 border-b-2 font-medium text-sm border-transparent text-gray-500"
                   data-tab="nutrition">
             <i class="fas fa-info-circle mr-2"></i>
             Características
           </button>
           <button onclick="showTab('delivery')" 
-                  class="tab-btn py-4 px-1 border-b-2 font-medium text-sm transition-colors border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300"
+                  class="tab-btn py-4 px-1 border-b-2 font-medium text-sm border-transparent text-gray-500"
                   data-tab="delivery">
             <i class="fas fa-truck mr-2"></i>
             Entrega
@@ -281,37 +251,37 @@
       
       <!-- Tab content -->
       <div class="p-6">
-        <div id="ingredients" class="tab-pane animate-fade-in">
+        <div id="ingredients" class="tab-pane">
           <h3 class="text-xl font-semibold text-gray-900 mb-4">Especificaciones Técnicas</h3>
           <div class="prose prose-gray max-w-none">
             <p class="text-gray-700">Nuestros tacos de billar están fabricados con materiales de la más alta calidad y precisión:</p>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
               <div class="space-y-3">
-                <div class="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+                <div class="flex items-center justify-between p-3 bg-gray-50 rounded">
                   <span class="font-medium">Peso:</span>
-                  <span class="text-primary-600 font-semibold">19 onz</span>
+                  <span class="text-blue-600 font-semibold">19 onz</span>
                 </div>
-                <div class="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+                <div class="flex items-center justify-between p-3 bg-gray-50 rounded">
                   <span class="font-medium">Punta del casquillo:</span>
-                  <span class="text-primary-600 font-semibold">11.5 mm</span>
+                  <span class="text-blue-600 font-semibold">11.5 mm</span>
                 </div>
-                <div class="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+                <div class="flex items-center justify-between p-3 bg-gray-50 rounded">
                   <span class="font-medium">Material del shaft:</span>
-                  <span class="text-primary-600 font-semibold">Madera premium</span>
+                  <span class="text-blue-600 font-semibold">Madera premium</span>
                 </div>
               </div>
               <div class="space-y-3">
-                <div class="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+                <div class="flex items-center justify-between p-3 bg-gray-50 rounded">
                   <span class="font-medium">Longitud:</span>
-                  <span class="text-primary-600 font-semibold">147 cm</span>
+                  <span class="text-blue-600 font-semibold">147 cm</span>
                 </div>
-                <div class="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+                <div class="flex items-center justify-between p-3 bg-gray-50 rounded">
                   <span class="font-medium">Tipo de rosca:</span>
-                  <span class="text-primary-600 font-semibold">5/16 x 18</span>
+                  <span class="text-blue-600 font-semibold">5/16 x 18</span>
                 </div>
-                <div class="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+                <div class="flex items-center justify-between p-3 bg-gray-50 rounded">
                   <span class="font-medium">Acabado:</span>
-                  <span class="text-primary-600 font-semibold">Lacado profesional</span>
+                  <span class="text-blue-600 font-semibold">Lacado profesional</span>
                 </div>
               </div>
             </div>
@@ -321,7 +291,7 @@
         <div id="nutrition" class="tab-pane hidden">
           <h3 class="text-xl font-semibold text-gray-900 mb-4">Características del Producto</h3>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div class="bg-gray-50 rounded-lg p-4">
+            <div class="bg-gray-50 rounded p-4">
               <h4 class="font-semibold text-gray-900 mb-3">Características Principales</h4>
               <div class="space-y-2 text-sm">
                 <div class="flex justify-between"><span>Nivel:</span><span class="font-medium">Profesional</span></div>
@@ -332,7 +302,7 @@
                 <div class="flex justify-between"><span>Garantía:</span><span class="font-medium">1 año</span></div>
               </div>
             </div>
-            <div class="bg-gray-50 rounded-lg p-4">
+            <div class="bg-gray-50 rounded p-4">
               <h4 class="font-semibold text-gray-900 mb-3">Ventajas</h4>
               <ul class="space-y-2 text-sm">
                 <li class="flex items-center"><i class="fas fa-star text-yellow-500 mr-2"></i> Precisión excepcional</li>
@@ -346,7 +316,7 @@
         <div id="delivery" class="tab-pane hidden">
           <h3 class="text-xl font-semibold text-gray-900 mb-4">Información de Entrega y Garantía</h3>
           <div class="space-y-4">
-            <div class="bg-blue-50 border border-blue-200 rounded-lg p-4">
+            <div class="bg-blue-50 border border-blue-200 rounded p-4">
               <div class="flex items-center mb-2">
                 <i class="fas fa-shipping-fast text-blue-600 mr-2"></i>
                 <h4 class="font-semibold text-blue-900">Envío Nacional</h4>
@@ -354,7 +324,7 @@
               <p class="text-blue-800 text-sm">Entregamos a toda Colombia con embalaje especializado para proteger tu taco de billar. Tiempo de entrega: 2-5 días hábiles.</p>
             </div>
             
-            <div class="bg-green-50 border border-green-200 rounded-lg p-4">
+            <div class="bg-green-50 border border-green-200 rounded p-4">
               <div class="flex items-center mb-2">
                 <i class="fas fa-shield-alt text-green-600 mr-2"></i>
                 <h4 class="font-semibold text-green-900">Garantía de Calidad</h4>
@@ -367,7 +337,7 @@
               </div>
             </div>
             
-            <div class="bg-purple-50 border border-purple-200 rounded-lg p-4">
+            <div class="bg-purple-50 border border-purple-200 rounded p-4">
               <div class="flex items-center mb-2">
                 <i class="fas fa-box text-purple-600 mr-2"></i>
                 <h4 class="font-semibold text-purple-900">Incluye en la Compra</h4>

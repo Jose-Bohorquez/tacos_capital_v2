@@ -92,147 +92,15 @@
       --primary-900: #7a2e11;
     }
     
-    .glass-effect {
-      backdrop-filter: blur(10px);
-      background: rgba(255, 255, 255, 0.1);
-    }
-    
     .gradient-bg {
-      background: linear-gradient(135deg, var(--primary-500) 0%, var(--primary-700) 100%);
+      background: #2563eb;
     }
     
-    .text-shadow {
-      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-    }
+
     
-    .image-zoom {
-      transition: transform 0.3s ease;
-    }
+
     
-    .image-zoom:hover {
-      transform: scale(1.05);
-    }
-    
-    /* Animaciones principales */
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    
-    @keyframes slideUp {
-      from { opacity: 0; transform: translateY(30px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    
-    @keyframes pulse {
-      0%, 100% { opacity: 1; }
-      50% { opacity: 0.5; }
-    }
-    
-    @keyframes bounce {
-      0%, 20%, 53%, 80%, 100% { transform: translate3d(0,0,0); }
-      40%, 43% { transform: translate3d(0,-30px,0); }
-      70% { transform: translate3d(0,-15px,0); }
-      90% { transform: translate3d(0,-4px,0); }
-    }
-    
-    @keyframes shimmer {
-      0% { background-position: -200px 0; }
-      100% { background-position: calc(200px + 100%) 0; }
-    }
-    
-    @keyframes slideDown {
-      from { transform: translateY(-100%); opacity: 0; }
-      to { transform: translateY(0); opacity: 1; }
-    }
-    
-    @keyframes slideInLeft {
-      from { transform: translateX(-100%); opacity: 0; }
-      to { transform: translateX(0); opacity: 1; }
-    }
-    
-    @keyframes slideInRight {
-      from { transform: translateX(100%); opacity: 0; }
-      to { transform: translateX(0); opacity: 1; }
-    }
-    
-    @keyframes fadeInScale {
-      from { transform: scale(0.8); opacity: 0; }
-      to { transform: scale(1); opacity: 1; }
-    }
-    
-    @keyframes float {
-      0%, 100% { transform: translateY(0px); }
-      50% { transform: translateY(-20px); }
-    }
-    
-    @keyframes glow {
-      0%, 100% { box-shadow: 0 0 5px rgba(59, 130, 246, 0.5); }
-      50% { box-shadow: 0 0 20px rgba(59, 130, 246, 0.8), 0 0 30px rgba(59, 130, 246, 0.6); }
-    }
-    
-    @keyframes rotate360 {
-      from { transform: rotate(0deg); }
-      to { transform: rotate(360deg); }
-    }
-    
-    @keyframes wiggle {
-      0%, 7% { transform: rotateZ(0); }
-      15% { transform: rotateZ(-15deg); }
-      20% { transform: rotateZ(10deg); }
-      25% { transform: rotateZ(-10deg); }
-      30% { transform: rotateZ(6deg); }
-      35% { transform: rotateZ(-4deg); }
-      40%, 100% { transform: rotateZ(0); }
-    }
-    
-    .animate-fade-in {
-      animation: fadeIn 0.8s ease-out;
-    }
-    
-    .animate-slide-up {
-      animation: slideUp 1s ease-out 0.3s both;
-    }
-    
-    .animate-slide-down {
-      animation: slideDown 0.6s ease-out;
-    }
-    
-    .animate-slide-in-left {
-      animation: slideInLeft 0.6s ease-out;
-    }
-    
-    .animate-slide-in-right {
-      animation: slideInRight 0.6s ease-out;
-    }
-    
-    .animate-fade-in-scale {
-      animation: fadeInScale 0.6s ease-out;
-    }
-    
-    .animate-float {
-      animation: float 3s ease-in-out infinite;
-    }
-    
-    .animate-glow {
-      animation: glow 2s ease-in-out infinite;
-    }
-    
-    .animate-spin-slow {
-      animation: rotate360 3s linear infinite;
-    }
-    
-    .animate-wiggle {
-      animation: wiggle 1s ease-in-out;
-    }
-    
-    .animate-pulse {
-      animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-    }
-    
-    .animate-bounce {
-      animation: bounce 1s infinite;
-    }
+
     
     /* Efectos hover mejorados */
     .hover-lift {
@@ -253,33 +121,14 @@
       transform: rotate(5deg) scale(1.1);
     }
     
-    .shimmer {
-      background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
-      background-size: 200px 100%;
-      animation: shimmer 1.5s infinite;
-    }
+
     
     /* Smooth scrolling */
     html {
       scroll-behavior: smooth;
     }
     
-    /* Loading states */
-    .loading {
-      position: relative;
-      overflow: hidden;
-    }
-    
-    .loading::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: -100%;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
-      animation: shimmer 1.5s infinite;
-    }
+
     
     /* Micro-interacciones para botones */
     .btn-interactive {
@@ -327,16 +176,16 @@
 </head>
 <body class="bg-gray-50 font-sans antialiased">
   <!-- Header -->
-  <header class="glass-effect sticky top-0 z-50 border-b border-white/20 animate-slide-down">
+  <header class="bg-white sticky top-0 z-50 border-b border-gray-200">
     <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between items-center h-20">
         <!-- Logo -->
-        <div class="flex items-center space-x-4 group">
-          <div class="w-12 h-12 gradient-bg rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-110">
+        <div class="flex items-center space-x-4">
+          <div class="w-12 h-12 bg-blue-600 rounded flex items-center justify-center">
             <span class="text-white font-bold text-2xl">🎱</span>
           </div>
-          <div class="group-hover:transform group-hover:scale-105 transition-transform duration-300">
-            <h1 class="text-2xl font-bold text-gray-900 bg-gradient-to-r from-primary-600 to-primary-800 bg-clip-text text-transparent">
+          <div>
+            <h1 class="text-2xl font-bold text-gray-900">
               Tacos Capital
             </h1>
             <p class="text-sm text-gray-600 font-medium">Tacos de Billar Profesionales</p>
@@ -345,31 +194,38 @@
         
         <!-- Navigation -->
         <nav class="hidden md:flex items-center space-x-2">
-          <a href="/" class="nav-link group relative px-4 py-2 rounded-xl font-medium transition-all duration-300 hover:bg-primary-50">
-            <span class="relative z-10 text-gray-700 group-hover:text-primary-600 transition-colors duration-300">Inicio</span>
-            <div class="absolute inset-0 bg-gradient-to-r from-primary-500 to-primary-600 rounded-xl opacity-0 group-hover:opacity-10 transition-opacity duration-300"></div>
+          <a href="/" class="px-4 py-2 rounded font-medium <?= $_SERVER['REQUEST_URI'] === '/' ? 'text-blue-600 bg-blue-50' : 'text-gray-700 hover:text-blue-600' ?>">
+            Inicio
           </a>
-          <a href="/productos" class="nav-link group relative px-4 py-2 rounded-xl font-medium transition-all duration-300 hover:bg-primary-50">
-            <span class="relative z-10 text-gray-700 group-hover:text-primary-600 transition-colors duration-300">Productos</span>
-            <div class="absolute inset-0 bg-gradient-to-r from-primary-500 to-primary-600 rounded-xl opacity-0 group-hover:opacity-10 transition-opacity duration-300"></div>
+          <a href="/productos" class="px-4 py-2 rounded font-medium <?= strpos($_SERVER['REQUEST_URI'], '/productos') === 0 ? 'text-blue-600 bg-blue-50' : 'text-gray-700 hover:text-blue-600' ?>">
+            Productos
           </a>
-          <a href="/checkout" class="nav-link group relative px-4 py-2 rounded-xl font-medium transition-all duration-300 hover:bg-primary-50">
-            <span class="relative z-10 text-gray-700 group-hover:text-primary-600 transition-colors duration-300">Carrito</span>
-            <span class="absolute -top-1 -right-1 bg-gradient-to-r from-red-500 to-red-600 text-white text-xs rounded-full w-6 h-6 flex items-center justify-center shadow-lg animate-pulse">
-              0
-            </span>
-            <div class="absolute inset-0 bg-gradient-to-r from-primary-500 to-primary-600 rounded-xl opacity-0 group-hover:opacity-10 transition-opacity duration-300"></div>
-          </a>
-          <a href="/admin" class="nav-link group relative px-4 py-2 rounded-xl font-medium transition-all duration-300 hover:bg-primary-50">
-            <span class="relative z-10 text-gray-700 group-hover:text-primary-600 transition-colors duration-300">Admin</span>
-            <div class="absolute inset-0 bg-gradient-to-r from-primary-500 to-primary-600 rounded-xl opacity-0 group-hover:opacity-10 transition-opacity duration-300"></div>
+          <a href="https://wa.me/573188763377" target="_blank" class="bg-green-600 hover:bg-green-700 text-white px-6 py-2 rounded font-medium transition-colors">
+            <i class="fab fa-whatsapp mr-2"></i>
+            Contactar
           </a>
         </nav>
         
         <!-- Mobile menu button -->
-        <button class="md:hidden p-2 rounded-lg text-gray-600 hover:text-gray-900 hover:bg-gray-100 transition-colors">
+        <button class="md:hidden p-2 rounded text-gray-700 hover:text-blue-600" onclick="toggleMobileMenu()">
           <i class="fas fa-bars text-xl"></i>
         </button>
+      </div>
+      
+      <!-- Mobile Navigation -->
+      <div id="mobile-menu" class="hidden md:hidden pb-4">
+        <div class="space-y-2">
+          <a href="/" class="block px-4 py-2 rounded font-medium <?= $_SERVER['REQUEST_URI'] === '/' ? 'text-blue-600 bg-blue-50' : 'text-gray-700 hover:text-blue-600' ?>">
+            Inicio
+          </a>
+          <a href="/productos" class="block px-4 py-2 rounded font-medium <?= strpos($_SERVER['REQUEST_URI'], '/productos') === 0 ? 'text-blue-600 bg-blue-50' : 'text-gray-700 hover:text-blue-600' ?>">
+            Productos
+          </a>
+          <a href="https://wa.me/573188763377" target="_blank" class="block bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded font-medium transition-colors">
+            <i class="fab fa-whatsapp mr-2"></i>
+            Contactar
+          </a>
+        </div>
       </div>
     </div>
   </header>
@@ -380,27 +236,21 @@
   </main>
 
   <!-- Footer -->
-  <footer class="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white relative overflow-hidden">
-    <!-- Decorative elements -->
-    <div class="absolute inset-0 opacity-10">
-      <div class="absolute top-10 left-10 w-32 h-32 bg-primary-500 rounded-full blur-3xl animate-pulse"></div>
-      <div class="absolute bottom-10 right-10 w-24 h-24 bg-blue-500 rounded-full blur-2xl animate-pulse delay-1000"></div>
-      <div class="absolute top-1/2 left-1/3 w-16 h-16 bg-green-500 rounded-full blur-xl animate-pulse delay-500"></div>
-    </div>
+  <footer class="bg-gray-900 text-white">
     
-    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
       <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
         <!-- Logo y descripción -->
         <div class="col-span-1 md:col-span-2">
-          <div class="flex items-center space-x-4 mb-6 group">
-            <div class="w-14 h-14 gradient-bg rounded-2xl flex items-center justify-center shadow-2xl group-hover:shadow-primary-500/25 transition-all duration-300 group-hover:scale-110">
+          <div class="flex items-center space-x-4 mb-6">
+            <div class="w-14 h-14 bg-blue-600 rounded flex items-center justify-center">
               <span class="text-white font-bold text-3xl">🎱</span>
             </div>
             <div>
-              <h3 class="text-2xl font-bold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+              <h3 class="text-2xl font-bold text-white">
                 Tacos Capital
               </h3>
-              <p class="text-primary-400 font-medium">Tacos de Billar Profesionales</p>
+              <p class="text-blue-400 font-medium">Tacos de Billar Profesionales</p>
             </div>
           </div>
           <p class="text-gray-300 mb-6 text-lg leading-relaxed">
@@ -408,13 +258,13 @@
             para jugadores profesionales y aficionados exigentes.
           </p>
           <div class="flex space-x-6">
-            <a href="#" class="text-gray-400 hover:text-primary-400 transition-all duration-300 hover:scale-125 transform">
+            <a href="#" class="text-gray-400 hover:text-blue-400">
               <i class="fab fa-facebook text-2xl"></i>
             </a>
-            <a href="#" class="text-gray-400 hover:text-primary-400 transition-all duration-300 hover:scale-125 transform">
+            <a href="#" class="text-gray-400 hover:text-blue-400">
               <i class="fab fa-instagram text-2xl"></i>
             </a>
-            <a href="#" class="text-gray-400 hover:text-primary-400 transition-all duration-300 hover:scale-125 transform">
+            <a href="#" class="text-gray-400 hover:text-blue-400">
               <i class="fab fa-whatsapp text-2xl"></i>
             </a>
           </div>
@@ -424,10 +274,10 @@
         <div>
           <h4 class="text-xl font-bold mb-6 text-white">Enlaces Rápidos</h4>
           <ul class="space-y-3">
-            <li><a href="/" class="text-gray-300 hover:text-primary-400 transition-all duration-300 hover:translate-x-2 transform inline-block">🏠 Inicio</a></li>
-            <li><a href="/productos" class="text-gray-300 hover:text-primary-400 transition-all duration-300 hover:translate-x-2 transform inline-block">🎱 Productos</a></li>
-            <li><a href="/checkout" class="text-gray-300 hover:text-primary-400 transition-all duration-300 hover:translate-x-2 transform inline-block">🛒 Carrito</a></li>
-            <li><a href="/admin" class="text-gray-300 hover:text-primary-400 transition-all duration-300 hover:translate-x-2 transform inline-block">⚙️ Admin</a></li>
+            <li><a href="/" class="text-gray-300 hover:text-blue-400">🏠 Inicio</a></li>
+            <li><a href="/productos" class="text-gray-300 hover:text-blue-400">🎱 Productos</a></li>
+            <li><a href="/checkout" class="text-gray-300 hover:text-blue-400">🛒 Carrito</a></li>
+            <li><a href="/admin" class="text-gray-300 hover:text-blue-400">⚙️ Admin</a></li>
           </ul>
         </div>
 
@@ -435,20 +285,20 @@
         <div>
           <h4 class="text-xl font-bold mb-6 text-white">Contacto</h4>
           <ul class="space-y-4 text-gray-300">
-            <li class="flex items-center space-x-3 hover:text-primary-400 transition-colors duration-300">
-              <i class="fas fa-phone text-primary-400"></i>
+            <li class="flex items-center space-x-3 hover:text-blue-400">
+              <i class="fas fa-phone text-blue-400"></i>
               <span>+57 300 123 4567</span>
             </li>
-            <li class="flex items-center space-x-3 hover:text-primary-400 transition-colors duration-300">
-              <i class="fas fa-envelope text-primary-400"></i>
+            <li class="flex items-center space-x-3 hover:text-blue-400">
+              <i class="fas fa-envelope text-blue-400"></i>
               <span>info@tacoscapital.com</span>
             </li>
-            <li class="flex items-center space-x-3 hover:text-primary-400 transition-colors duration-300">
-              <i class="fas fa-map-marker-alt text-primary-400"></i>
+            <li class="flex items-center space-x-3 hover:text-blue-400">
+              <i class="fas fa-map-marker-alt text-blue-400"></i>
               <span>Bogotá, Colombia</span>
             </li>
-            <li class="flex items-center space-x-3 hover:text-primary-400 transition-colors duration-300">
-              <i class="fas fa-clock text-primary-400"></i>
+            <li class="flex items-center space-x-3 hover:text-blue-400">
+              <i class="fas fa-clock text-blue-400"></i>
               <span>Lun - Sáb: 9AM - 7PM</span>
             </li>
           </ul>
@@ -461,9 +311,9 @@
             &copy; 2025 Tacos Capital. Todos los derechos reservados.
           </p>
           <div class="flex space-x-6 text-sm text-gray-400">
-            <a href="#" class="hover:text-primary-400 transition-colors duration-300">Política de Privacidad</a>
-            <a href="#" class="hover:text-primary-400 transition-colors duration-300">Términos de Servicio</a>
-            <a href="#" class="hover:text-primary-400 transition-colors duration-300">Garantías</a>
+            <a href="#" class="hover:text-blue-400">Política de Privacidad</a>
+            <a href="#" class="hover:text-blue-400">Términos de Servicio</a>
+            <a href="#" class="hover:text-blue-400">Garantías</a>
           </div>
         </div>
       </div>
@@ -570,35 +420,7 @@
             });
         });
         
-        // Efecto ripple mejorado en botones
-        document.querySelectorAll('.btn-interactive').forEach(button => {
-            button.addEventListener('click', function(e) {
-                const ripple = document.createElement('span');
-                const rect = this.getBoundingClientRect();
-                const size = Math.max(rect.width, rect.height);
-                const x = e.clientX - rect.left - size / 2;
-                const y = e.clientY - rect.top - size / 2;
-                
-                ripple.style.cssText = `
-                    position: absolute;
-                    width: ${size}px;
-                    height: ${size}px;
-                    left: ${x}px;
-                    top: ${y}px;
-                    background: radial-gradient(circle, rgba(255,255,255,0.6) 0%, transparent 70%);
-                    border-radius: 50%;
-                    transform: scale(0);
-                    animation: ripple-effect 0.6s ease-out;
-                    pointer-events: none;
-                `;
-                
-                this.appendChild(ripple);
-                
-                setTimeout(() => {
-                    ripple.remove();
-                }, 600);
-            });
-        });
+
         
         // Lazy loading mejorado para imágenes
         const imageObserver = new IntersectionObserver((entries, observer) => {
@@ -677,31 +499,7 @@
             counterObserver.observe(element);
         });
 
-        // Efecto de partículas flotantes
-        function createFloatingParticles() {
-            const container = document.querySelector('.particles-container');
-            if (!container) return;
 
-            for (let i = 0; i < 20; i++) {
-                const particle = document.createElement('div');
-                particle.className = 'floating-particle';
-                particle.style.cssText = `
-                    position: absolute;
-                    width: ${Math.random() * 6 + 2}px;
-                    height: ${Math.random() * 6 + 2}px;
-                    background: rgba(59, 130, 246, ${Math.random() * 0.5 + 0.1});
-                    border-radius: 50%;
-                    left: ${Math.random() * 100}%;
-                    top: ${Math.random() * 100}%;
-                    animation: float ${Math.random() * 3 + 2}s ease-in-out infinite;
-                    animation-delay: ${Math.random() * 2}s;
-                `;
-                container.appendChild(particle);
-            }
-        }
-
-        // Crear partículas si existe el contenedor
-        createFloatingParticles();
 
         // Efecto de cursor personalizado
         const cursor = document.createElement('div');
@@ -762,12 +560,7 @@
     // CSS adicional para nuevas animaciones
     const additionalStyles = document.createElement('style');
     additionalStyles.textContent = `
-        @keyframes ripple-effect {
-            to {
-                transform: scale(4);
-                opacity: 0;
-            }
-        }
+
         
         .loaded {
             opacity: 1;
@@ -779,38 +572,48 @@
             mix-blend-mode: difference;
         }
         
-        header {
-            transition: transform 0.3s ease;
-        }
+
         
-        .floating-particle {
-            pointer-events: none;
-        }
+
         
-        .fade-in-left {
-            opacity: 0;
-            transform: translateX(-30px);
-            transition: all 0.6s ease;
-        }
-        
-        .fade-in-left.visible {
-            opacity: 1;
-            transform: translateX(0);
-        }
-        
-        .fade-in-right {
-            opacity: 0;
-            transform: translateX(30px);
-            transition: all 0.6s ease;
-        }
-        
-        .fade-in-right.visible {
-            opacity: 1;
-            transform: translateX(0);
-        }
+
     `;
     
     document.head.appendChild(additionalStyles);
+    
+    // Función para el menú móvil
+    function toggleMobileMenu() {
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenu.classList.toggle('hidden');
+    }
   </script>
+
+  <!-- Botón flotante de WhatsApp -->
+  <div class="fixed bottom-6 right-6 z-50 whatsapp-float">
+    <a href="https://wa.me/573188763377?text=Hola, me gustaría información sobre sus tacos de billar" target="_blank" 
+       class="flex items-center justify-center w-16 h-16 bg-green-500 hover:bg-green-600 rounded-full shadow-lg hover:shadow-xl transform hover:scale-110 transition-all duration-300 animate-pulse">
+      <i class="fab fa-whatsapp text-white text-3xl"></i>
+    </a>
+    <!-- Tooltip -->
+    <div class="absolute bottom-20 right-0 bg-gray-800 text-white px-3 py-2 rounded-lg text-sm whitespace-nowrap opacity-0 hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+      ¡Chatea con nosotros!
+      <div class="absolute top-full right-4 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-gray-800"></div>
+    </div>
+  </div>
+
+  <style>
+    .whatsapp-float {
+      animation: float 3s ease-in-out infinite;
+    }
+    
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+    }
+    
+    .whatsapp-float:hover .opacity-0 {
+      opacity: 1;
+    }
+  </style>
 </body>
 </html>

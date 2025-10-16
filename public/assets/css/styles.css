@@ -1,12 +1,18 @@
 /* Tacos Capital - Estilos Personalizados */
 
-/* Variables CSS para consistencia */
+/* Variables CSS para consistencia - Colores Colombianos */
 :root {
-    --primary-color: #3b82f6;
-    --primary-dark: #2563eb;
-    --secondary-color: #10b981;
-    --secondary-dark: #059669;
-    --accent-color: #f59e0b;
+    /* Colores principales colombianos */
+    --colombia-yellow: #FFD700;
+    --colombia-blue: #0033A0;
+    --colombia-red: #CE1126;
+    
+    /* Paleta principal actualizada */
+    --primary-color: #0033A0;
+    --primary-dark: #002080;
+    --secondary-color: #FFD700;
+    --secondary-dark: #E6C200;
+    --accent-color: #CE1126;
     --gray-50: #f9fafb;
     --gray-100: #f3f4f6;
     --gray-200: #e5e7eb;

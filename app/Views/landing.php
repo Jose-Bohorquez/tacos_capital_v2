@@ -1,716 +1,592 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?= $titulo ?? 'Tacos Capital - Tacos de Billar Profesionales' ?></title>
-    
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="<?= $descripcion ?? 'Tacos Capital - Especialistas en tacos de billar de alta calidad. Venta, reparación y personalización de tacos.' ?>">
-    <meta name="keywords" content="tacos de billar, tacos profesionales, virolas, suelas, reparación de tacos, personalización de tacos, billar, pool, accesorios de billar">
-    <meta name="author" content="Tacos Capital">
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://tacoscapital.online/">
-    <meta property="og:title" content="<?= $titulo ?? 'Tacos Capital - Tacos de Billar Profesionales' ?>">
-    <meta property="og:description" content="<?= $descripcion ?? 'Tacos Capital - Especialistas en tacos de billar de alta calidad.' ?>">
-    <meta property="og:image" content="https://tacoscapital.online/assets/img/og-image.jpg">
-    
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://tacoscapital.online/">
-    <meta property="twitter:title" content="<?= $titulo ?? 'Tacos Capital - Tacos de Billar Profesionales' ?>">
-    <meta property="twitter:description" content="<?= $descripcion ?? 'Tacos Capital - Especialistas en tacos de billar de alta calidad.' ?>">
-    <meta property="twitter:image" content="https://tacoscapital.online/assets/img/og-image.jpg">
-    
-    <!-- Favicon -->
-    <link rel="icon" href="/icons/favicon.ico">
-    <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png">
-    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="/assets/css/styles.css">
-</head>
-<body class="bg-gray-50">
-    <!-- Navigation -->
-    <nav class="navbar fixed w-full z-50" id="navbar">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-16">
-                <div class="flex items-center">
-                    <div class="flex-shrink-0">
-                        <a href="/" class="flex items-center hover-lift">
-                            <img class="h-8 w-auto" src="/assets/img/logo.png" alt="Tacos Capital" onerror="this.style.display='none'">
-                            <span class="ml-2 text-xl font-bold text-gradient">Tacos Capital</span>
-                        </a>
-                    </div>
-                    <div class="hidden md:block">
-                        <div class="ml-10 flex items-baseline space-x-4">
-                            <a href="/" class="px-3 py-2 rounded-md text-sm font-medium text-white hover:bg-white hover:bg-opacity-10 transition-all duration-300">Inicio</a>
-                            <a href="#productos" class="px-3 py-2 rounded-md text-sm font-medium text-white hover:bg-white hover:bg-opacity-10 transition-all duration-300">Productos</a>
-                            <a href="#servicios" class="px-3 py-2 rounded-md text-sm font-medium text-white hover:bg-white hover:bg-opacity-10 transition-all duration-300">Servicios</a>
-                            <a href="#contacto" class="px-3 py-2 rounded-md text-sm font-medium text-white hover:bg-white hover:bg-opacity-10 transition-all duration-300">Contacto</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="hidden md:block">
-                    <div class="ml-4 flex items-center md:ml-6">
-                        <a href="https://wa.me/573012345678" target="_blank" class="btn btn-success whatsapp-pulse">
-                            <i class="fab fa-whatsapp mr-2"></i> Contáctanos
-                        </a>
-                    </div>
-                </div>
-                <div class="-mr-2 flex md:hidden">
-                    <button type="button" class="bg-gray-800 inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white transition-all duration-300" id="mobile-menu-button">
-                        <span class="sr-only">Abrir menú principal</span>
-                        <i class="fas fa-bars"></i>
-                    </button>
-                </div>
-            </div>
-            
-            <!-- Mobile menu -->
-            <div class="hidden md:hidden" id="mobile-menu">
-                <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 glass-effect">
-                    <a href="/" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-white hover:bg-opacity-10 transition-all duration-300">Inicio</a>
-                    <a href="#productos" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-white hover:bg-opacity-10 transition-all duration-300">Productos</a>
-                    <a href="#servicios" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-white hover:bg-opacity-10 transition-all duration-300">Servicios</a>
-                    <a href="#contacto" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-white hover:bg-opacity-10 transition-all duration-300">Contacto</a>
-                    <a href="https://wa.me/573012345678" target="_blank" class="flex items-center px-3 py-2 rounded-md text-base font-medium text-white hover:bg-white hover:bg-opacity-10 transition-all duration-300">
-                        <i class="fab fa-whatsapp mr-2"></i> Contáctanos
-                    </a>
-                </div>
-            </div>
-        </div>
-    </nav>
+<?= $this->extend('layout') ?>
 
-    <!-- Hero Section -->
-    <section class="hero-section relative min-h-screen flex items-center justify-center overflow-hidden">
-        <img src="/assets/img/banner_tacos_capital.png" alt="Tacos de billar" class="hero-bg absolute inset-0 w-full h-full object-cover">
-        <div class="hero-overlay absolute inset-0 bg-black bg-opacity-40"></div>
-        <div class="hero-content relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center fade-in">
-            <h1 class="hero-title text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-4 sm:mb-6">
-                <span class="text-gradient">Tacos Capital</span>
-            </h1>
-            <p class="hero-subtitle text-lg sm:text-xl md:text-2xl text-gray-200 mb-6 sm:mb-8 max-w-3xl mx-auto px-4">
-                Los mejores tacos de billar para jugadores de todos los niveles
+<?= $this->section('content') ?>
+
+<!-- Hero Section con Banner Mejorado -->
+<section class="relative min-h-screen flex items-center justify-center overflow-hidden">
+  <!-- Banner de fondo con efectos -->
+  <div class="absolute inset-0 z-0">
+    <img src="/assets/img/banner_tacos_capital.svg" alt="Tacos Capital Banner" class="w-full h-full object-cover">
+    <div class="absolute inset-0 bg-gradient-to-br from-black/60 via-black/40 to-transparent"></div>
+    <!-- Efectos de partículas flotantes -->
+    <div class="absolute inset-0 overflow-hidden">
+      <div class="absolute top-1/4 left-1/4 w-2 h-2 bg-yellow-400 rounded-full animate-ping opacity-75"></div>
+      <div class="absolute top-3/4 right-1/4 w-1 h-1 bg-blue-400 rounded-full animate-pulse opacity-60"></div>
+      <div class="absolute top-1/2 left-3/4 w-3 h-3 bg-white rounded-full animate-bounce opacity-40"></div>
+    </div>
+  </div>
+  
+  <!-- Contenido del Hero -->
+  <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <div class="max-w-5xl mx-auto">
+      <!-- Badge superior -->
+      <div class="inline-flex items-center bg-yellow-500/20 backdrop-blur-sm border border-yellow-400/30 rounded-full px-6 py-2 mb-8">
+        <span class="text-yellow-400 font-semibold text-sm sm:text-base">🏆 #1 en Tacos Profesionales</span>
+      </div>
+      
+      <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-black text-white mb-6 leading-tight">
+        <span class="bg-gradient-to-r from-white via-blue-200 to-yellow-400 bg-clip-text text-transparent">
+          Tacos de Billar
+        </span>
+        <span class="block text-yellow-400 drop-shadow-2xl animate-pulse">
+          Profesionales
+        </span>
+      </h1>
+      
+      <p class="text-lg sm:text-xl md:text-2xl text-gray-200 mb-10 max-w-4xl mx-auto leading-relaxed font-light">
+        🎱 Fabricación artesanal con los mejores materiales. Calidad profesional para jugadores exigentes que buscan la <span class="text-yellow-400 font-semibold">perfección</span> en cada jugada.
+      </p>
+      
+      <!-- Estadísticas rápidas -->
+      <div class="grid grid-cols-3 gap-4 sm:gap-8 mb-10 max-w-2xl mx-auto">
+        <div class="text-center">
+          <div class="text-2xl sm:text-3xl font-bold text-yellow-400">500+</div>
+          <div class="text-xs sm:text-sm text-gray-300">Tacos Vendidos</div>
+        </div>
+        <div class="text-center">
+          <div class="text-2xl sm:text-3xl font-bold text-blue-400">15+</div>
+          <div class="text-xs sm:text-sm text-gray-300">Años Experiencia</div>
+        </div>
+        <div class="text-center">
+          <div class="text-2xl sm:text-3xl font-bold text-green-400">100%</div>
+          <div class="text-xs sm:text-sm text-gray-300">Satisfacción</div>
+        </div>
+      </div>
+      
+      <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+        <a href="/productos" class="group w-full sm:w-auto bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-blue-500/25">
+          <span class="flex items-center justify-center">
+            🎯 Ver Productos
+            <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
+          </span>
+        </a>
+        <a href="#servicios" class="group w-full sm:w-auto border-2 border-white/80 backdrop-blur-sm text-white hover:bg-white hover:text-gray-900 px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 transform hover:scale-105">
+          <span class="flex items-center justify-center">
+            🔧 Nuestros Servicios
+            <i class="fas fa-chevron-down ml-2 group-hover:translate-y-1 transition-transform"></i>
+          </span>
+        </a>
+      </div>
+      
+      <!-- Scroll indicator -->
+      <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+        <div class="w-6 h-10 border-2 border-white/50 rounded-full flex justify-center">
+          <div class="w-1 h-3 bg-white/70 rounded-full mt-2 animate-pulse"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Features Section Mejorada -->
+<section class="py-16 lg:py-24 bg-gradient-to-br from-gray-50 via-white to-blue-50 relative overflow-hidden">
+  <!-- Elementos decorativos de fondo -->
+  <div class="absolute top-0 left-0 w-72 h-72 bg-blue-200 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob"></div>
+  <div class="absolute top-0 right-0 w-72 h-72 bg-yellow-200 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-2000"></div>
+  <div class="absolute -bottom-8 left-20 w-72 h-72 bg-pink-200 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-4000"></div>
+  
+  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <div class="inline-flex items-center bg-blue-100 rounded-full px-6 py-2 mb-6">
+        <span class="text-blue-600 font-semibold text-sm">✨ NUESTRAS VENTAJAS</span>
+      </div>
+      <h2 class="text-3xl sm:text-4xl lg:text-6xl font-black text-gray-900 mb-6">
+        ¿Por qué elegir 
+        <span class="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+          Tacos Capital?
+        </span>
+      </h2>
+      <p class="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+        Nos especializamos en crear tacos de billar de la más alta calidad con atención al detalle que marca la diferencia
+      </p>
+    </div>
+    
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
+      <!-- Feature 1 -->
+      <div class="group relative">
+        <div class="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
+          <div class="absolute -top-6 left-8">
+            <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+              <i class="fas fa-hammer text-xl text-white"></i>
+            </div>
+          </div>
+          <div class="pt-8">
+            <h3 class="text-xl sm:text-2xl font-bold text-gray-900 mb-4 group-hover:text-blue-600 transition-colors">
+              🔨 Fabricación Artesanal
+            </h3>
+            <p class="text-gray-600 leading-relaxed mb-4">
+              Cada taco es elaborado a mano por artesanos expertos con décadas de experiencia en el oficio.
             </p>
-            <div class="flex flex-col sm:flex-row justify-center space-y-3 sm:space-y-0 sm:space-x-4 px-4">
-                <a href="#productos" class="btn btn-primary scale-in w-full sm:w-auto">
-                    <i class="fas fa-eye mr-2"></i>
-                    Ver Productos
+            <div class="flex items-center text-blue-600 font-semibold text-sm">
+              <span>Más de 15 años de experiencia</span>
+              <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Feature 2 -->
+      <div class="group relative">
+        <div class="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
+          <div class="absolute -top-6 left-8">
+            <div class="w-12 h-12 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+              <i class="fas fa-gem text-xl text-white"></i>
+            </div>
+          </div>
+          <div class="pt-8">
+            <h3 class="text-xl sm:text-2xl font-bold text-gray-900 mb-4 group-hover:text-purple-600 transition-colors">
+              💎 Materiales Premium
+            </h3>
+            <p class="text-gray-600 leading-relaxed mb-4">
+              Utilizamos únicamente maderas selectas y materiales de la más alta calidad para garantizar durabilidad.
+            </p>
+            <div class="flex items-center text-purple-600 font-semibold text-sm">
+              <span>Maderas importadas certificadas</span>
+              <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Feature 3 -->
+      <div class="group relative">
+        <div class="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
+          <div class="absolute -top-6 left-8">
+            <div class="w-12 h-12 bg-gradient-to-br from-yellow-500 to-yellow-600 rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+              <i class="fas fa-trophy text-xl text-white"></i>
+            </div>
+          </div>
+          <div class="pt-8">
+            <h3 class="text-xl sm:text-2xl font-bold text-gray-900 mb-4 group-hover:text-yellow-600 transition-colors">
+              🏆 Calidad Profesional
+            </h3>
+            <p class="text-gray-600 leading-relaxed mb-4">
+              Tacos utilizados por jugadores profesionales y reconocidos en competencias nacionales e internacionales.
+            </p>
+            <div class="flex items-center text-yellow-600 font-semibold text-sm">
+              <span>Usados por campeones</span>
+              <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Testimonial rápido -->
+    <div class="mt-16 text-center">
+      <div class="bg-white/80 backdrop-blur-sm rounded-2xl p-8 max-w-4xl mx-auto border border-gray-200 shadow-xl">
+        <div class="flex items-center justify-center mb-4">
+          <div class="flex text-yellow-400 text-2xl">
+            ⭐⭐⭐⭐⭐
+          </div>
+        </div>
+        <blockquote class="text-lg sm:text-xl text-gray-700 italic mb-4">
+          "Los mejores tacos que he usado en mi carrera. La calidad y precisión son incomparables."
+        </blockquote>
+        <cite class="text-blue-600 font-semibold">- Carlos Mendoza, Campeón Nacional 2023</cite>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Services Section Mejorada -->
+<section id="servicios" class="py-16 lg:py-24 bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900 relative overflow-hidden">
+  <!-- Efectos de fondo -->
+  <div class="absolute inset-0">
+    <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-pulse"></div>
+    <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-pulse animation-delay-2000"></div>
+  </div>
+  
+  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <div class="inline-flex items-center bg-white/10 backdrop-blur-sm rounded-full px-6 py-2 mb-6">
+        <span class="text-blue-200 font-semibold text-sm">🔧 SERVICIOS ESPECIALIZADOS</span>
+      </div>
+      <h2 class="text-3xl sm:text-4xl lg:text-6xl font-black text-white mb-6">
+        Nuestros 
+        <span class="bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent">
+          Servicios
+        </span>
+      </h2>
+      <p class="text-lg sm:text-xl text-blue-200 max-w-4xl mx-auto leading-relaxed">
+        Ofrecemos servicios especializados para mantener y personalizar tu taco de billar con la más alta calidad
+      </p>
+    </div>
+    
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
+      <!-- Servicio 1 -->
+      <div class="group relative">
+        <div class="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300 transform hover:-translate-y-2 hover:shadow-2xl">
+          <div class="flex flex-col sm:flex-row items-start gap-6">
+            <div class="relative w-full sm:w-32 h-32 rounded-xl overflow-hidden flex-shrink-0">
+              <div class="absolute inset-0 bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center">
+                <i class="fas fa-tools text-4xl text-white"></i>
+              </div>
+              <div class="absolute inset-0 bg-black/20"></div>
+            </div>
+            <div class="flex-1">
+              <div class="flex items-center mb-4">
+                <div class="w-3 h-3 bg-yellow-400 rounded-full mr-3 animate-pulse"></div>
+                <h3 class="text-xl sm:text-2xl font-bold text-white group-hover:text-yellow-400 transition-colors">
+                  🔧 Cambio de Virolas
+                </h3>
+              </div>
+              <p class="text-blue-200 mb-6 leading-relaxed">
+                Reemplazamos virolas desgastadas con materiales de alta calidad. Servicio profesional que garantiza el mejor rendimiento de tu taco.
+              </p>
+              <div class="flex flex-col sm:flex-row gap-3">
+                <a href="https://wa.me/573188763377?text=Hola, necesito información sobre el cambio de virolas" target="_blank" class="group/btn inline-flex items-center bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white px-6 py-3 rounded-xl font-semibold transition-all transform hover:scale-105">
+                  <i class="fab fa-whatsapp mr-2 text-lg"></i>
+                  Consultar Precio
+                  <i class="fas fa-arrow-right ml-2 group-hover/btn:translate-x-1 transition-transform"></i>
                 </a>
-                <a href="#servicios" class="btn btn-secondary scale-in w-full sm:w-auto">
-                    <i class="fas fa-tools mr-2"></i>
-                    Nuestros Servicios
+                <div class="text-yellow-400 font-semibold text-sm flex items-center">
+                  <i class="fas fa-clock mr-2"></i>
+                  Servicio en 24h
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Servicio 2 -->
+      <div class="group relative">
+        <div class="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300 transform hover:-translate-y-2 hover:shadow-2xl">
+          <div class="flex flex-col sm:flex-row items-start gap-6">
+            <div class="relative w-full sm:w-32 h-32 rounded-xl overflow-hidden flex-shrink-0">
+              <div class="absolute inset-0 bg-gradient-to-br from-purple-500 to-purple-600 flex items-center justify-center">
+                <i class="fas fa-paint-brush text-4xl text-white"></i>
+              </div>
+              <div class="absolute inset-0 bg-black/20"></div>
+            </div>
+            <div class="flex-1">
+              <div class="flex items-center mb-4">
+                <div class="w-3 h-3 bg-yellow-400 rounded-full mr-3 animate-pulse"></div>
+                <h3 class="text-xl sm:text-2xl font-bold text-white group-hover:text-yellow-400 transition-colors">
+                  🎨 Personalización
+                </h3>
+              </div>
+              <p class="text-blue-200 mb-6 leading-relaxed">
+                Diseños únicos y grabados personalizados. Haz que tu taco sea verdaderamente tuyo con nuestros servicios de personalización.
+              </p>
+              <div class="flex flex-col sm:flex-row gap-3">
+                <a href="https://wa.me/573188763377?text=Hola, quiero personalizar mi taco de billar" target="_blank" class="group/btn inline-flex items-center bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white px-6 py-3 rounded-xl font-semibold transition-all transform hover:scale-105">
+                  <i class="fab fa-whatsapp mr-2 text-lg"></i>
+                  Consultar Precio
+                  <i class="fas fa-arrow-right ml-2 group-hover/btn:translate-x-1 transition-transform"></i>
                 </a>
+                <div class="text-yellow-400 font-semibold text-sm flex items-center">
+                  <i class="fas fa-star mr-2"></i>
+                  Diseños únicos
+                </div>
+              </div>
             </div>
+          </div>
         </div>
-        <!-- Scroll indicator -->
-        <div class="absolute bottom-4 sm:bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-            <i class="fas fa-chevron-down text-white text-xl sm:text-2xl"></i>
+      </div>
+    </div>
+    
+    <!-- Información adicional de servicios -->
+    <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="text-center">
+        <div class="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-4">
+          <i class="fas fa-shipping-fast text-2xl text-yellow-400"></i>
         </div>
-    </section>
+        <h4 class="text-white font-semibold mb-2">Envío Gratis</h4>
+        <p class="text-blue-200 text-sm">En servicios superiores a $100.000</p>
+      </div>
+      <div class="text-center">
+        <div class="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-4">
+          <i class="fas fa-shield-alt text-2xl text-yellow-400"></i>
+        </div>
+        <h4 class="text-white font-semibold mb-2">Garantía Total</h4>
+        <p class="text-blue-200 text-sm">6 meses en todos nuestros servicios</p>
+      </div>
+      <div class="text-center">
+        <div class="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-4">
+          <i class="fas fa-headset text-2xl text-yellow-400"></i>
+        </div>
+        <h4 class="text-white font-semibold mb-2">Soporte 24/7</h4>
+        <p class="text-blue-200 text-sm">Atención personalizada siempre</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <!-- Features Section -->
-    <section class="section bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="section-title slide-up">¿Por qué elegirnos?</h2>
-            
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-                <div class="text-center p-4 sm:p-6 bg-gray-50 rounded-lg shadow-sm hover:shadow-md transition duration-300 fade-in" style="animation-delay: 0.1s;">
-                    <div class="inline-flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 bg-blue-100 text-blue-600 rounded-full mb-3 sm:mb-4">
-                        <i class="fas fa-medal text-xl sm:text-2xl"></i>
-                    </div>
-                    <h3 class="text-lg sm:text-xl font-semibold mb-2">Calidad Premium</h3>
-                    <p class="text-sm sm:text-base text-gray-600">Utilizamos los mejores materiales para garantizar durabilidad y rendimiento en cada taco.</p>
+<!-- Featured Products Section Mejorada -->
+<section class="py-16 lg:py-24 bg-gradient-to-br from-gray-50 to-gray-100 relative overflow-hidden">
+  <!-- Efectos de fondo -->
+  <div class="absolute inset-0">
+    <div class="absolute top-1/3 left-1/3 w-96 h-96 bg-blue-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse"></div>
+    <div class="absolute bottom-1/3 right-1/3 w-96 h-96 bg-purple-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse animation-delay-2000"></div>
+  </div>
+  
+  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <div class="inline-flex items-center bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full px-6 py-2 mb-6">
+        <span class="font-semibold text-sm">⭐ PRODUCTOS DESTACADOS</span>
+      </div>
+      <h2 class="text-3xl sm:text-4xl lg:text-6xl font-black text-gray-900 mb-6">
+        Nuestros 
+        <span class="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+          Bestsellers
+        </span>
+      </h2>
+      <p class="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+        Descubre nuestra selección de tacos más populares y mejor valorados por jugadores profesionales
+      </p>
+    </div>
+    
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 lg:gap-8">
+      <?php if (!empty($productos)): ?>
+        <?php foreach (array_slice($productos, 0, 8) as $index => $producto): ?>
+          <div class="group relative">
+            <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-200">
+              <div class="relative overflow-hidden">
+                <img src="<?= $producto['imagen'] ?>" alt="<?= $producto['nombre'] ?>" class="w-full h-48 sm:h-56 object-cover group-hover:scale-110 transition-transform duration-500">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div class="absolute top-3 left-3">
+                  <span class="bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-3 py-1 rounded-full text-sm font-bold shadow-lg">
+                    🏆 #<?= $index + 1 ?>
+                  </span>
                 </div>
-                
-                <div class="text-center p-4 sm:p-6 bg-gray-50 rounded-lg shadow-sm hover:shadow-md transition duration-300 fade-in" style="animation-delay: 0.2s;">
-                    <div class="inline-flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 bg-blue-100 text-blue-600 rounded-full mb-3 sm:mb-4">
-                        <i class="fas fa-tools text-xl sm:text-2xl"></i>
-                    </div>
-                    <h3 class="text-lg sm:text-xl font-semibold mb-2">Servicio Técnico</h3>
-                    <p class="text-sm sm:text-base text-gray-600">Ofrecemos reparación y mantenimiento profesional para mantener tus tacos en óptimas condiciones.</p>
+                <div class="absolute top-3 right-3">
+                  <div class="bg-white/90 backdrop-blur-sm rounded-full p-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <i class="fas fa-heart text-red-500 text-sm"></i>
+                  </div>
                 </div>
-                
-                <div class="text-center p-4 sm:p-6 bg-gray-50 rounded-lg shadow-sm hover:shadow-md transition duration-300 fade-in sm:col-span-2 lg:col-span-1" style="animation-delay: 0.3s;">
-                    <div class="inline-flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 bg-blue-100 text-blue-600 rounded-full mb-3 sm:mb-4">
-                        <i class="fas fa-paint-brush text-xl sm:text-2xl"></i>
-                    </div>
-                    <h3 class="text-lg sm:text-xl font-semibold mb-2">Personalización</h3>
-                    <p class="text-sm sm:text-base text-gray-600">Creamos tacos a medida según tus preferencias, estilo de juego y especificaciones técnicas.</p>
+              </div>
+              <div class="p-6">
+                <h3 class="text-lg sm:text-xl font-bold text-gray-900 mb-3 line-clamp-2 group-hover:text-blue-600 transition-colors">
+                  <?= $producto['nombre'] ?>
+                </h3>
+                <div class="flex items-center justify-between mb-3">
+                  <p class="text-2xl sm:text-3xl font-black text-blue-600">
+                    $<?= number_format($producto['precio'], 0, ',', '.') ?>
+                  </p>
+                  <div class="flex items-center text-yellow-400">
+                    <i class="fas fa-star text-sm"></i>
+                    <i class="fas fa-star text-sm"></i>
+                    <i class="fas fa-star text-sm"></i>
+                    <i class="fas fa-star text-sm"></i>
+                    <i class="fas fa-star text-sm"></i>
+                    <span class="text-gray-500 text-sm ml-1">(4.9)</span>
+                  </div>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section id="servicios" class="section bg-gray-100">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="section-title slide-up">Nuestros Servicios</h2>
-            
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-                <!-- Servicio 1: Cambio de Virolas -->
-                <div class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col md:flex-row fade-in" style="animation-delay: 0.1s;">
-                    <div class="md:w-2/5">
-                        <img src="/assets/img/servicios/cambio_de_casquillos.jpg" alt="Cambio de virolas" class="w-full h-full object-cover">
-                    </div>
-                    <div class="md:w-3/5 p-6">
-                        <h3 class="text-2xl font-bold mb-3">Cambio de Virolas</h3>
-                        <p class="text-gray-600 mb-4">Reemplazamos virolas desgastadas o dañadas por nuevas de alta calidad. Disponemos de diferentes materiales como fibra, marfil sintético y metal.</p>
-                        <ul class="mb-4 space-y-2">
-                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Virolas de fibra</li>
-                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Virolas de marfil sintético</li>
-                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Virolas metálicas</li>
-                        </ul>
-                        <a href="https://wa.me/573188763377" 
-                           target="_blank" 
-                           class="inline-flex items-center px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition duration-300">
-                            <i class="fab fa-whatsapp mr-2"></i> Consultar servicio
-                        </a>
-                    </div>
-                </div>
-                
-                <!-- Servicio 2: Personalización -->
-                <div class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col md:flex-row fade-in" style="animation-delay: 0.2s;">
-                    <div class="md:w-2/5">
-                        <img src="/assets/img/servicios/marcacion_laser_v2.jpg" alt="Personalización de tacos" class="w-full h-full object-cover">
-                    </div>
-                    <div class="md:w-3/5 p-6">
-                        <h3 class="text-2xl font-bold mb-3">Personalización</h3>
-                        <p class="text-gray-600 mb-4">Creamos tacos únicos según tus especificaciones. Elige materiales, diseños y características técnicas para un taco a tu medida.</p>
-                        <ul class="mb-4 space-y-2">
-                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Grabado personalizado</li>
-                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Selección de maderas exóticas</li>
-                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Diseños exclusivos</li>
-                        </ul>
-                        <a href="https://wa.me/573188763377" 
-                           target="_blank" 
-                           class="inline-flex items-center px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition duration-300">
-                            <i class="fab fa-whatsapp mr-2"></i> Consultar servicio
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Productos Destacados -->
-    <section id="productos" class="section bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <h2 class="section-title slide-up">Productos Destacados</h2>
-                <p class="section-subtitle slide-up">Descubre nuestra selección de tacos de billar de alta calidad</p>
-            </div>
-            
-            <?php if (empty($productos)): ?>
-                <div class="text-center py-12">
-                    <i class="fas fa-box-open text-gray-400 text-6xl mb-4"></i>
-                    <p class="text-gray-600 text-lg">No hay productos disponibles en este momento.</p>
-                </div>
-            <?php else: ?>
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-                    <?php foreach ($productos as $index => $producto): ?>
-                        <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 fade-in" style="animation-delay: <?= $index * 0.1 ?>s;">
-                            <div class="relative h-48 sm:h-56 lg:h-64 overflow-hidden">
-                                <?php if (!empty($producto['portada'])): ?>
-                                    <img src="<?= $producto['portada'] ?>" 
-                                         alt="<?= htmlspecialchars($producto['nombre']) ?>" 
-                                         class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                                         loading="lazy">
-                                <?php else: ?>
-                                    <div class="w-full h-full bg-gray-200 flex items-center justify-center">
-                                        <i class="fas fa-image text-gray-400 text-3xl sm:text-4xl"></i>
-                                    </div>
-                                <?php endif; ?>
-                                
-                                <?php if ($producto['destacado']): ?>
-                                    <div class="absolute top-2 left-2 bg-blue-600 text-white px-2 py-1 rounded text-xs font-semibold">
-                                        Destacado
-                                    </div>
-                                <?php endif; ?>
-                                
-                                <div class="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-40 transition-all duration-300 flex items-center justify-center opacity-0 hover:opacity-100">
-                                    <a href="/productos/<?= $producto['slug'] ?>" 
-                                       class="btn btn-primary btn-sm transform scale-90 hover:scale-100 transition-transform duration-200">
-                                        <i class="fas fa-eye mr-2"></i>
-                                        Ver detalles
-                                    </a>
-                                </div>
-                            </div>
-                            
-                            <div class="p-4 sm:p-6">
-                                <h3 class="text-lg font-semibold text-gray-900 mb-2 line-clamp-2"><?= htmlspecialchars($producto['nombre']) ?></h3>
-                                <p class="text-gray-600 text-sm mb-4 line-clamp-3"><?= htmlspecialchars($producto['descripcion_corta']) ?></p>
-                                
-                                <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
-                                    <span class="text-xl sm:text-2xl font-bold text-gradient">
-                                        $<?= $producto['precio_formateado'] ?>
-                                    </span>
-                                    <div class="flex space-x-2">
-                                        <a href="https://wa.me/573188763377?text=Hola, me interesa el producto: <?= urlencode($producto['nombre']) ?>" 
-                                           target="_blank"
-                                           class="btn btn-success btn-sm hover-lift flex-1 sm:flex-none">
-                                            <i class="fab fa-whatsapp mr-1 sm:mr-0"></i>
-                                            <span class="sm:hidden">WhatsApp</span>
-                                        </a>
-                                        <a href="/productos/<?= $producto['slug'] ?>" 
-                                           class="btn btn-secondary btn-sm hover-lift flex-1 sm:flex-none">
-                                            <i class="fas fa-info-circle mr-1 sm:mr-0"></i>
-                                            <span class="sm:hidden">Detalles</span>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    <?php endforeach; ?>
-                </div>
-                
-                <div class="text-center mt-12">
-                    <a href="/productos" class="btn btn-primary btn-lg hover-lift">
-                        <i class="fas fa-th-large mr-2"></i>
-                        Ver todos los productos
-                    </a>
-                </div>
-            <?php endif; ?>
-        </div>
-    </section>
-
-    <!-- Video Section -->
-    <section class="section bg-gray-100">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <h2 class="section-title slide-up">Aprende con Nosotros</h2>
-                <p class="section-subtitle slide-up max-w-3xl mx-auto">Mira nuestro video de la competencia</p>
-            </div>
-            
-            <div class="max-w-4xl mx-auto">
-                <div class="video-container scale-in">
-                    <iframe 
-                        width="100%" 
-                        height="450" 
-                        src="https://www.youtube.com/embed/oSOma1WXhLA?si=QMGIxFRGyvvlhPwd" 
-                        title="YouTube video player" 
-                        frameborder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                        allowfullscreen>
-                    </iframe>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contacto" class="section bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <h2 class="section-title slide-up">Contáctanos</h2>
-                <p class="section-subtitle slide-up">Estamos aquí para ayudarte con tus necesidades de billar</p>
-            </div>
-            
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-                <div class="card-contact fade-in sm:col-span-2 lg:col-span-1" style="animation-delay: 0.1s;">
-                    <div class="contact-icon bg-green-100 whatsapp-pulse">
-                        <i class="fab fa-whatsapp text-green-600 text-xl sm:text-2xl"></i>
-                    </div>
-                    <h3 class="text-lg sm:text-xl font-semibold mb-2">WhatsApp</h3>
-                    <p class="text-sm sm:text-base text-gray-600 mb-4">Chatea con nosotros directamente</p>
-                    <a href="https://wa.me/573012345678" 
-                       target="_blank"
-                       class="btn btn-success btn-sm hover-lift text-sm sm:text-base">
-                        +57 301 234 5678
-                    </a>
-                </div>
-                
-                <div class="card-contact fade-in" style="animation-delay: 0.2s;">
-                    <div class="contact-icon bg-blue-100">
-                        <i class="fas fa-envelope text-blue-600 text-xl sm:text-2xl"></i>
-                    </div>
-                    <h3 class="text-lg sm:text-xl font-semibold mb-2">Email</h3>
-                    <p class="text-sm sm:text-base text-gray-600 mb-4">Envíanos un correo</p>
-                    <a href="mailto:info@tacoscapital.com" 
-                       class="text-blue-600 hover:text-blue-700 font-medium hover-lift text-sm sm:text-base break-all">
-                        info@tacoscapital.com
-                    </a>
-                </div>
-                
-                <div class="card-contact fade-in" style="animation-delay: 0.3s;">
-                    <div class="contact-icon bg-purple-100">
-                        <i class="fas fa-map-marker-alt text-purple-600 text-xl sm:text-2xl"></i>
-                    </div>
-                    <h3 class="text-lg sm:text-xl font-semibold mb-2">Ubicación</h3>
-                    <p class="text-sm sm:text-base text-gray-600 mb-4">Visítanos en nuestro taller</p>
-                    <p class="text-purple-600 font-medium text-sm sm:text-base">Bogotá, Colombia</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Mapa de Ubicación -->
-    <section class="section bg-gray-100">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <h2 class="section-title slide-up">Nuestra Ubicación</h2>
-                <p class="section-subtitle slide-up max-w-3xl mx-auto">Visítanos en nuestra tienda física para conocer nuestros productos</p>
-            </div>
-            
-            <div class="max-w-4xl mx-auto">
-                <div class="rounded-lg overflow-hidden shadow-xl fade-in">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d994.2015918253761!2d-74.1359348303677!3d4.628608136440334!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9d003fd34e39%3A0x3de784bb9fedb59e!2sTACOS%20CAPITAL!5e0!3m2!1ses!2sco!4v1743842935182!5m2!1ses!2sco" 
-                    width="100%" height="450" 
-                    style="border:0;" 
-                    allowfullscreen="" 
-                    loading="lazy" 
-                    referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
-                
-                <div class="mt-8 bg-white p-6 rounded-lg shadow-md fade-in" style="animation-delay: 0.2s;">
-                    <div class="flex items-start mb-4">
-                        <i class="fas fa-map-marker-alt text-blue-600 text-2xl mt-1 mr-4"></i>
-                        <div>
-                            <h3 class="text-lg font-semibold mb-1">Dirección</h3>
-                            <p class="text-gray-600">Agenda tu visita</p>
-                            <p class="text-gray-600">Diagonal 5 B # 71 B - 24 , Bogotá, Colombia</p>
-                        </div>
-                    </div>
-                    
-                    <div class="flex items-start mb-4">
-                        <i class="fas fa-clock text-blue-600 text-2xl mt-1 mr-4"></i>
-                        <div>
-                            <h3 class="text-lg font-semibold mb-1">Horario de Atención</h3>
-                            <p class="text-gray-600">Agenda tu visita antes de llegar</p>
-                            <p class="text-gray-600">Lunes a Viernes: 9:00 AM - 6:00 PM</p>
-                            <p class="text-gray-600">Sábados: 9:00 AM - 2:00 PM</p>
-                        </div>
-                    </div>
-                    
-                    <div class="flex items-start">
-                        <i class="fas fa-phone-alt text-blue-600 text-2xl mt-1 mr-4"></i>
-                        <div>
-                            <h3 class="text-lg font-semibold mb-1">Teléfono</h3>
-                            <p class="text-gray-600">Agenda tu visita</p>
-                            <p class="text-gray-600">+57 3188763377</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Nuestra Ubicación -->
-    <section class="py-20 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-gray-900 mb-4 fade-in">Nuestra Ubicación</h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto fade-in" style="animation-delay: 0.2s;">
-                    Visítanos en nuestro taller especializado
+                <p class="text-gray-600 text-sm mb-6 line-clamp-3 leading-relaxed">
+                  <?= $producto['descripcion_corta'] ?>
                 </p>
-            </div>
-
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                <!-- Mapa -->
-                <div class="fade-in" style="animation-delay: 0.3s;">
-                    <div class="rounded-lg overflow-hidden shadow-lg h-96">
-                        <iframe 
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.8234567890123!2d-74.0123456789!3d4.6123456789!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNMKwMzYnNDQuNCJOIDc0wrAwMCc0NC40Ilc!5e0!3m2!1ses!2sco!4v1234567890123!5m2!1ses!2sco"
-                            width="100%" 
-                            height="100%" 
-                            style="border:0;" 
-                            allowfullscreen="" 
-                            loading="lazy" 
-                            referrerpolicy="no-referrer-when-downgrade">
-                        </iframe>
-                    </div>
+                <div class="space-y-3">
+                  <a href="/producto/<?= $producto['id'] ?>" class="group/btn block w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white text-center py-3 rounded-xl font-semibold transition-all transform hover:scale-105 shadow-lg">
+                    Ver detalles
+                    <i class="fas fa-arrow-right ml-2 group-hover/btn:translate-x-1 transition-transform"></i>
+                  </a>
+                  <button class="w-full bg-green-50 hover:bg-green-100 text-green-700 py-2 rounded-xl font-medium transition-colors border border-green-200">
+                    <i class="fab fa-whatsapp mr-2"></i>
+                    Consultar
+                  </button>
                 </div>
-
-                <!-- Información de contacto -->
-                <div class="fade-in" style="animation-delay: 0.4s;">
-                    <div class="bg-white p-8 rounded-lg shadow-lg">
-                        <h3 class="text-2xl font-bold text-gray-900 mb-6">Información de Contacto</h3>
-                        
-                        <div class="space-y-6">
-                            <div class="flex items-start">
-                                <div class="flex-shrink-0">
-                                    <i class="fas fa-map-marker-alt text-blue-600 text-xl mt-1"></i>
-                                </div>
-                                <div class="ml-4">
-                                    <h4 class="text-lg font-semibold text-gray-900">Dirección</h4>
-                                    <p class="text-gray-600">Calle 123 #45-67<br>Bogotá, Colombia</p>
-                                </div>
-                            </div>
-
-                            <div class="flex items-start">
-                                <div class="flex-shrink-0">
-                                    <i class="fas fa-clock text-blue-600 text-xl mt-1"></i>
-                                </div>
-                                <div class="ml-4">
-                                    <h4 class="text-lg font-semibold text-gray-900">Horarios de Atención</h4>
-                                    <div class="text-gray-600">
-                                        <p>Lunes a Viernes: 8:00 AM - 6:00 PM</p>
-                                        <p>Sábados: 9:00 AM - 4:00 PM</p>
-                                        <p>Domingos: Cerrado</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="flex items-start">
-                                <div class="flex-shrink-0">
-                                    <i class="fas fa-phone text-blue-600 text-xl mt-1"></i>
-                                </div>
-                                <div class="ml-4">
-                                    <h4 class="text-lg font-semibold text-gray-900">Teléfono</h4>
-                                    <p class="text-gray-600">+57 318 876 3377</p>
-                                </div>
-                            </div>
-
-                            <div class="pt-4">
-                                <a href="https://wa.me/573188763377?text=Hola,%20me%20interesa%20conocer%20más%20sobre%20sus%20servicios" 
-                                   target="_blank"
-                                   class="inline-flex items-center px-6 py-3 bg-green-600 text-white font-semibold rounded-lg hover:bg-green-700 transition-colors duration-300">
-                                    <i class="fab fa-whatsapp mr-2 text-xl"></i>
-                                    Contactar por WhatsApp
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+              </div>
             </div>
+          </div>
+        <?php endforeach; ?>
+      <?php else: ?>
+        <div class="col-span-full text-center py-12">
+          <div class="bg-white rounded-2xl p-8 shadow-lg">
+            <i class="fas fa-box-open text-6xl text-gray-300 mb-4"></i>
+            <p class="text-gray-500 text-lg">No hay productos disponibles en este momento.</p>
+          </div>
         </div>
-    </section>
+      <?php endif; ?>
+    </div>
+    
+    <div class="text-center mt-16">
+      <div class="bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-lg inline-block">
+        <h3 class="text-2xl font-bold text-gray-900 mb-4">¿Quieres ver más opciones?</h3>
+        <p class="text-gray-600 mb-6">Explora nuestro catálogo completo con más de 50 modelos diferentes</p>
+        <a href="/productos" class="group inline-flex items-center bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all transform hover:scale-105 shadow-lg">
+          <i class="fas fa-th-large mr-3 text-xl"></i>
+          Ver Catálogo Completo
+          <i class="fas fa-arrow-right ml-3 group-hover:translate-x-1 transition-transform"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <!-- Footer -->
-    <footer class="bg-gray-800 text-white py-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                <div class="col-span-1 md:col-span-2 fade-in" style="animation-delay: 0.1s;">
-                    <h3 class="text-xl font-bold mb-4 text-gradient">Tacos Capital</h3>
-                    <p class="text-gray-300 mb-4">
-                        Especialistas en tacos de billar de alta calidad. Más de 10 años de experiencia 
-                        en venta, reparación y personalización de tacos profesionales.
-                    </p>
-                    <div class="flex space-x-4">
-                        <a href="#" class="text-gray-300 hover:text-white transition duration-300 hover-lift">
-                            <i class="fab fa-facebook text-xl"></i>
-                        </a>
-                        <a href="#" class="text-gray-300 hover:text-white transition duration-300 hover-lift">
-                            <i class="fab fa-instagram text-xl"></i>
-                        </a>
-                        <a href="https://wa.me/573012345678" target="_blank" class="text-gray-300 hover:text-white transition duration-300 hover-lift whatsapp-pulse">
-                            <i class="fab fa-whatsapp text-xl"></i>
-                        </a>
-                    </div>
-                </div>
-                
-                <div class="fade-in" style="animation-delay: 0.2s;">
-                    <h4 class="text-lg font-semibold mb-4">Enlaces</h4>
-                    <ul class="space-y-2">
-                        <li><a href="/" class="text-gray-300 hover:text-white transition duration-300 hover-lift">Inicio</a></li>
-                        <li><a href="/productos" class="text-gray-300 hover:text-white transition duration-300 hover-lift">Productos</a></li>
-                        <li><a href="#servicios" class="text-gray-300 hover:text-white transition duration-300 hover-lift">Servicios</a></li>
-                        <li><a href="#contacto" class="text-gray-300 hover:text-white transition duration-300 hover-lift">Contacto</a></li>
-                    </ul>
-                </div>
-                
-                <div class="fade-in" style="animation-delay: 0.3s;">
-                    <h4 class="text-lg font-semibold mb-4">Contacto</h4>
-                    <ul class="space-y-2 text-gray-300 mb-4">
-                        <li><i class="fas fa-phone mr-2"></i> +57 301 234 5678</li>
-                        <li><i class="fas fa-envelope mr-2"></i> info@tacoscapital.com</li>
-                        <li><i class="fas fa-map-marker-alt mr-2"></i> Bogotá, Colombia</li>
-                    </ul>
-                    <a href="https://wa.me/573012345678" target="_blank" class="btn btn-success btn-sm whatsapp-pulse">
-                        <i class="fab fa-whatsapp mr-2"></i>
-                        Contactar ahora
-                    </a>
-                </div>
-            </div>
-            
-            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
-                <p class="text-gray-300">
-                    &copy; <?= date('Y') ?> Tacos Capital. Todos los derechos reservados.
-                </p>
-            </div>
+<!-- Call to Action Section Mejorada -->
+<section class="py-16 lg:py-24 bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 relative overflow-hidden">
+  <!-- Efectos de fondo -->
+  <div class="absolute inset-0">
+    <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse"></div>
+    <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse animation-delay-2000"></div>
+    <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-yellow-400 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-pulse animation-delay-4000"></div>
+  </div>
+  
+  <!-- Patrón de puntos -->
+  <div class="absolute inset-0 opacity-10">
+    <div class="absolute inset-0" style="background-image: radial-gradient(circle, white 1px, transparent 1px); background-size: 20px 20px;"></div>
+  </div>
+  
+  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <div class="max-w-5xl mx-auto">
+      <!-- Badge superior -->
+      <div class="inline-flex items-center bg-gradient-to-r from-yellow-400 to-orange-500 text-gray-900 rounded-full px-6 py-2 mb-8 font-bold text-sm">
+        <span>🚀 ÚNETE A MÁS DE 1,000 JUGADORES SATISFECHOS</span>
+      </div>
+      
+      <h2 class="text-4xl sm:text-5xl lg:text-7xl font-black text-white mb-8 leading-tight">
+        ¿Listo para 
+        <span class="bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">
+          Dominar
+        </span>
+        <br class="hidden sm:block">
+        la Mesa?
+      </h2>
+      
+      <p class="text-lg sm:text-xl text-blue-200 mb-12 max-w-4xl mx-auto leading-relaxed">
+        Contáctanos hoy mismo y descubre cómo nuestros tacos pueden llevar tu juego al siguiente nivel. 
+        <span class="text-yellow-400 font-semibold">Asesoría personalizada</span> y productos de 
+        <span class="text-yellow-400 font-semibold">calidad profesional</span> te esperan.
+      </p>
+      
+      <!-- Estadísticas rápidas -->
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-12">
+        <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
+          <div class="text-3xl sm:text-4xl font-black text-yellow-400 mb-2">1000+</div>
+          <div class="text-blue-200 font-medium">Clientes Satisfechos</div>
         </div>
-    </footer>
+        <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
+          <div class="text-3xl sm:text-4xl font-black text-yellow-400 mb-2">15+</div>
+          <div class="text-blue-200 font-medium">Años de Experiencia</div>
+        </div>
+        <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
+          <div class="text-3xl sm:text-4xl font-black text-yellow-400 mb-2">99%</div>
+          <div class="text-blue-200 font-medium">Satisfacción Garantizada</div>
+        </div>
+      </div>
+      
+      <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
+        <a href="https://wa.me/573188763377?text=Hola, quiero información sobre sus tacos de billar" target="_blank" class="group w-full sm:w-auto bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white px-10 py-5 rounded-2xl font-bold text-lg transition-all transform hover:scale-105 shadow-2xl inline-flex items-center justify-center">
+          <i class="fab fa-whatsapp mr-3 text-2xl"></i>
+          Contactar por WhatsApp
+          <i class="fas fa-arrow-right ml-3 group-hover:translate-x-1 transition-transform"></i>
+        </a>
+        <a href="/productos" class="group w-full sm:w-auto bg-white/10 backdrop-blur-sm border-2 border-white/30 text-white hover:bg-white hover:text-gray-900 px-10 py-5 rounded-2xl font-bold text-lg transition-all transform hover:scale-105 shadow-lg">
+          <i class="fas fa-th-large mr-3"></i>
+          Ver Catálogo Completo
+          <i class="fas fa-external-link-alt ml-3 group-hover:translate-x-1 transition-transform"></i>
+        </a>
+      </div>
+      
+      <!-- Garantías -->
+      <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="flex items-center justify-center text-blue-200">
+          <i class="fas fa-shipping-fast text-2xl mr-3 text-yellow-400"></i>
+          <span class="font-medium">Envío Gratis Nacional</span>
+        </div>
+        <div class="flex items-center justify-center text-blue-200">
+          <i class="fas fa-shield-alt text-2xl mr-3 text-yellow-400"></i>
+          <span class="font-medium">Garantía de 6 Meses</span>
+        </div>
+        <div class="flex items-center justify-center text-blue-200">
+          <i class="fas fa-undo text-2xl mr-3 text-yellow-400"></i>
+          <span class="font-medium">Devolución 30 Días</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <!-- JavaScript -->
-    <script>
-        // Mobile menu toggle
-        document.addEventListener('DOMContentLoaded', function() {
-            const mobileMenuButton = document.getElementById('mobile-menu-button');
-            const mobileMenu = document.getElementById('mobile-menu');
-            
-            if (mobileMenuButton && mobileMenu) {
-                mobileMenuButton.addEventListener('click', function() {
-                    mobileMenu.classList.toggle('hidden');
-                });
-            }
-            
-            // Smooth scrolling for anchor links
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    const target = document.querySelector(this.getAttribute('href'));
-                    if (target) {
-                        target.scrollIntoView({
-                            behavior: 'smooth',
-                            block: 'start'
-                        });
-                        
-                        // Close mobile menu if open
-                        if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
-                            mobileMenu.classList.add('hidden');
-                        }
-                    }
-                });
-            });
+<style>
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  
+  .line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  
+  /* Animaciones personalizadas */
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+  }
+  
+  @keyframes pulse-glow {
+    0%, 100% { box-shadow: 0 0 20px rgba(59, 130, 246, 0.3); }
+    50% { box-shadow: 0 0 40px rgba(59, 130, 246, 0.6); }
+  }
+  
+  @keyframes gradient-shift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+  .animation-delay-2000 {
+    animation-delay: 2s;
+  }
+  
+  .animation-delay-4000 {
+    animation-delay: 4s;
+  }
+  
+  .float-animation {
+    animation: float 3s ease-in-out infinite;
+  }
+  
+  .pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite;
+  }
+  
+  .gradient-shift {
+    background-size: 200% 200%;
+    animation: gradient-shift 3s ease infinite;
+  }
+  
+  /* Efectos de hover mejorados */
+  .hover-lift {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .hover-lift:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Efectos de texto brillante */
+  .text-glow {
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+  }
+  
+  /* Botones con efectos especiales */
+  .btn-special {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .btn-special::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+  }
+  
+  .btn-special:hover::before {
+    left: 100%;
+  }
+</style>
 
-            // Intersection Observer for animations
-            const observerOptions = {
-                threshold: 0.1,
-                rootMargin: '0px 0px -50px 0px'
-            };
-
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('animate');
-                    }
-                });
-            }, observerOptions);
-
-            // Observe all animated elements
-            const animatedElements = document.querySelectorAll('.fade-in, .slide-up, .scale-in');
-            animatedElements.forEach(el => observer.observe(el));
-        });
-
-        // Add to cart functionality
-        function addToCart(productId) {
-            // Show loading state
-            const button = event.target.closest('button');
-            const originalContent = button.innerHTML;
-            button.innerHTML = '<i class="fas fa-spinner fa-spin"></i>';
-            button.disabled = true;
-
-            // Simulate API call
-            fetch('/api/carrito/agregar', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({
-                    producto_id: productId,
-                    cantidad: 1
-                })
-            })
-            .then(response => response.json())
-            .then(data => {
-                if (data.success) {
-                    // Show success message
-                    button.innerHTML = '<i class="fas fa-check"></i>';
-                    button.classList.remove('btn-primary');
-                    button.classList.add('btn-success');
-                    
-                    // Show notification
-                    showNotification('Producto agregado al carrito', 'success');
-                    
-                    // Reset button after 2 seconds
-                    setTimeout(() => {
-                        button.innerHTML = originalContent;
-                        button.classList.remove('btn-success');
-                        button.classList.add('btn-primary');
-                        button.disabled = false;
-                    }, 2000);
-                } else {
-                    throw new Error(data.message || 'Error al agregar al carrito');
-                }
-            })
-            .catch(error => {
-                console.error('Error:', error);
-                button.innerHTML = originalContent;
-                button.disabled = false;
-                showNotification('Error al agregar al carrito', 'error');
-            });
-        }
-
-        // Notification system
-        function showNotification(message, type = 'info') {
-            const notification = document.createElement('div');
-            notification.className = `fixed top-4 right-4 z-50 p-4 rounded-lg shadow-lg transform translate-x-full transition-transform duration-300 ${
-                type === 'success' ? 'bg-green-500 text-white' :
-                type === 'error' ? 'bg-red-500 text-white' :
-                'bg-blue-500 text-white'
-            }`;
-            notification.innerHTML = `
-                <div class="flex items-center">
-                    <i class="fas fa-${type === 'success' ? 'check' : type === 'error' ? 'exclamation-triangle' : 'info'} mr-2"></i>
-                    <span>${message}</span>
-                </div>
-            `;
-            
-            document.body.appendChild(notification);
-            
-            // Animate in
-            setTimeout(() => {
-                notification.classList.remove('translate-x-full');
-            }, 100);
-            
-            // Remove after 3 seconds
-            setTimeout(() => {
-                notification.classList.add('translate-x-full');
-                setTimeout(() => {
-                    document.body.removeChild(notification);
-                }, 300);
-            }, 3000);
-        }
-
-        // Navbar scroll effect
-        window.addEventListener('scroll', () => {
-            const navbar = document.querySelector('.navbar');
-            if (window.scrollY > 100) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
-        });
-
-        // Lazy loading for images
-        if ('IntersectionObserver' in window) {
-            const imageObserver = new IntersectionObserver((entries, observer) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        const img = entry.target;
-                        img.src = img.dataset.src;
-                        img.classList.remove('lazy');
-                        imageObserver.unobserve(img);
-                    }
-                });
-            });
-
-            document.querySelectorAll('img[data-src]').forEach(img => {
-                imageObserver.observe(img);
-            });
-        }
-
-        // Parallax effect for hero section
-        window.addEventListener('scroll', () => {
-            const scrolled = window.pageYOffset;
-            const parallax = document.querySelector('.hero-bg');
-            if (parallax) {
-                const speed = scrolled * 0.5;
-                parallax.style.transform = `translateY(${speed}px)`;
-            }
-        });
-    </script>
-</body>
-</html>
+<?= $this->endSection() ?>
