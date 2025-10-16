@@ -1,0 +1,154 @@
+# Dependencias de Composer
+/vendor/
+composer.lock
+
+# Archivos de configuración sensibles
+.env
+.env.local
+.env.production
+.env.staging
+
+# Logs
+/storage/logs/
+*.log
+error.log
+access.log
+
+# Cache y archivos temporales
+/storage/cache/
+/storage/tmp/
+/storage/sessions/
+*.tmp
+*.temp
+
+# Archivos de base de datos
+*.sql
+*.sqlite
+*.db
+backup.sql
+
+# TODOS LOS ARCHIVOS DE MEDIA - IMÁGENES Y VIDEOS
+# Archivos de imágenes
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.bmp
+*.tiff
+*.tif
+*.webp
+*.svg
+*.ico
+*.psd
+*.ai
+
+# Archivos de video
+*.mp4
+*.avi
+*.mov
+*.wmv
+*.flv
+*.webm
+*.mkv
+*.m4v
+*.3gp
+*.mpg
+*.mpeg
+
+# Archivos de audio
+*.mp3
+*.wav
+*.flac
+*.aac
+*.ogg
+*.wma
+
+# Carpetas de media y uploads
+/public/media/
+/public/assets/images/
+/storage/uploads/
+/storage/productos/
+/uploads/
+/media/
+/images/
+/videos/
+/assets/uploads/
+
+# Archivos del sistema operativo
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# IDEs y editores
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.buildpath
+.settings/
+
+# Node.js (si usas npm/yarn)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+
+# Archivos de Docker (opcional, puedes comentar si quieres incluirlos)
+# docker-compose.override.yml
+# Dockerfile.local
+
+# Archivos de backup y temporales
+*.bak
+*.backup
+*.old
+*.orig
+*.rej
+*.swp
+*.tmp
+
+# Archivos de configuración local
+config/local.php
+config/development.php
+
+# Archivos ZIP y comprimidos
+*.zip
+*.rar
+*.tar.gz
+*.7z
+*.tar
+*.gz
+tacoscapital.zip
+
+# Archivos de testing
+/tests/coverage/
+phpunit.xml
+.phpunit.result.cache
+
+# Archivos de desarrollo
+temp_*.php
+test_*.php
+debug.php
+
+# Carpeta old (código legacy) - OMITIR COMPLETAMENTE
+/old/
+
+# Archivos específicos del proyecto
+temp_query.php
+
+# Archivos de documentación innecesarios
+*.pdf
+*.doc
+*.docx
+
+# Otros archivos grandes
+*.dmg
+*.iso
