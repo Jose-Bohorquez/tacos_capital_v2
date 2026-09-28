@@ -1,7 +1,26 @@
+<style>
+    /* Overlay del hero: bug real encontrado 2026-09-28 — bg-black/50 (plano) no daba contraste
+       suficiente en mobile. Se probó oscurecer más el overlay (hasta 72% negro), pero el
+       gráfico decorativo tiene blancos/colores muy brillantes (la cinta "TACOS CAPITAL") que
+       siguen visibles detrás del texto incluso así — ningún nivel razonable de opacidad lo
+       tapa limpiamente. Solución real: en mobile, donde el texto ocupa todo el ancho y el
+       recorte de object-cover cambia el encuadre, se OCULTA la imagen decorativa y se usa un
+       fondo sólido (mismo navy del header/footer, bg-gray-900) — en desktop la imagen se ve
+       normal, con degradado hacia la izquierda donde vive el texto. No se usan utilidades de
+       degradado de Tailwind (bg-gradient-to-r, etc.) porque app.css es un build estático y
+       purgado — esas clases no estaban en uso, no tienen CSS generado. */
+    .hero-scrim {
+        background: linear-gradient(90deg, rgba(0,0,0,.82) 0%, rgba(0,0,0,.82) 42%, rgba(0,0,0,.5) 68%, rgba(0,0,0,.25) 100%);
+    }
+    @media (max-width: 639px) {
+        .hero-scrim { background: #111827; } /* mismo tono que bg-gray-900 */
+        .hero-bg-img { display: none; }
+    }
+</style>
 <section class="relative h-[70vh] min-h-[420px] flex items-center">
-    <div class="absolute inset-0 bg-black/50 z-10"></div>
+    <div class="absolute inset-0 hero-scrim z-10"></div>
     <img src="/assets/img/banner_tacos_capital.png" alt="Tacos de billar profesionales"
-         class="absolute inset-0 w-full h-full object-cover">
+         class="hero-bg-img absolute inset-0 w-full h-full object-cover">
     <div class="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <h1 class="text-3xl sm:text-5xl font-extrabold text-white mb-4 max-w-2xl leading-tight">
             Tacos de billar en Bogotá para todos los niveles
@@ -23,23 +42,23 @@
 </section>
 
 <section class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="grid grid-cols-2 sm:grid-cols-4 gap-8 text-center">
-        <div class="p-6">
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 text-center">
+        <div class="bg-white rounded-xl shadow-sm hover:shadow-lg transition duration-300 p-6">
             <i class="fas fa-medal text-3xl text-blue-600 mb-3" aria-hidden="true"></i>
             <h3 class="font-semibold text-lg mb-2">Calidad premium</h3>
             <p class="text-gray-600 text-sm">Los mejores materiales para durabilidad y rendimiento.</p>
         </div>
-        <div class="p-6">
+        <div class="bg-white rounded-xl shadow-sm hover:shadow-lg transition duration-300 p-6">
             <i class="fas fa-tools text-3xl text-blue-600 mb-3" aria-hidden="true"></i>
             <h3 class="font-semibold text-lg mb-2">Servicio técnico</h3>
             <p class="text-gray-600 text-sm">Reparación y mantenimiento profesional.</p>
         </div>
-        <div class="p-6">
+        <div class="bg-white rounded-xl shadow-sm hover:shadow-lg transition duration-300 p-6">
             <i class="fas fa-paint-brush text-3xl text-blue-600 mb-3" aria-hidden="true"></i>
             <h3 class="font-semibold text-lg mb-2">Personalización</h3>
             <p class="text-gray-600 text-sm">Tacos a medida según tu estilo de juego.</p>
         </div>
-        <div class="p-6">
+        <div class="bg-white rounded-xl shadow-sm hover:shadow-lg transition duration-300 p-6">
             <i class="fas fa-hand-holding-dollar text-3xl text-blue-600 mb-3" aria-hidden="true"></i>
             <h3 class="font-semibold text-lg mb-2">Facilidades de pago</h3>
             <p class="text-gray-600 text-sm">Servicio de abonos y pago con link de pago.</p>
