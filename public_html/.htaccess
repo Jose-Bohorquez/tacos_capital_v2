@@ -1,0 +1,51 @@
+# Front controller: todo lo que no sea un archivo/carpeta real va a index.php
+RewriteEngine On
+
+# Forzar HTTPS y no-www
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+RewriteCond %{HTTP_HOST} ^www\.tacoscapital\.com$ [NC]
+RewriteRule ^(.*)$ https://tacoscapital.com/$1 [L,R=301]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ index.php [L]
+
+Options -Indexes
+
+<Files ".env">
+    Order Allow,Deny
+    Deny from all
+</Files>
+<Files ".htaccess">
+    Order Allow,Deny
+    Deny from all
+</Files>
+
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/json
+</IfModule>
+
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType image/webp "access plus 1 year"
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType image/jpeg "access plus 1 year"
+    ExpiresByType text/css "access plus 1 month"
+    ExpiresByType application/javascript "access plus 1 month"
+</IfModule>
+
+<IfModule mod_headers.c>
+    Header set X-XSS-Protection "1; mode=block"
+    Header set X-Content-Type-Options "nosniff"
+    Header set Referrer-Policy "strict-origin-when-cross-origin"
+    Header set Content-Security-Policy "default-src 'self'; script-src 'self' https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; img-src 'self' data:; font-src 'self' https://cdnjs.cloudflare.com; frame-src 'self' https://www.google.com"
+</IfModule>
+
+# Bloquear bots maliciosos, PERO nunca a los buscadores legítimos
+<IfModule mod_rewrite.c>
+    RewriteCond %{HTTP_USER_AGENT} ^.*(bot|spider|crawler|scraper|spyder|robot|scooter|scanner).*$ [NC]
+    RewriteCond %{HTTP_USER_AGENT} !(googlebot|google-inspectiontool|adsbot-google|mediapartners-google|bingbot|yandexbot|duckduckbot|baiduspider|applebot|facebookexternalhit|slurp|semrushbot|ahrefsbot) [NC]
+    RewriteRule .* - [F,L]
+</IfModule>

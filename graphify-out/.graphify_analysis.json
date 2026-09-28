@@ -1,0 +1,568 @@
+{
+  "communities": {
+    "0": [
+      "app_controllers_admin_adminauthcontroller",
+      "app_controllers_admin_adminauthcontroller_adminauthcontroller",
+      "app_controllers_admin_adminauthcontroller_adminauthcontroller_login",
+      "app_controllers_admin_adminauthcontroller_adminauthcontroller_logout",
+      "app_controllers_admin_adminauthcontroller_adminauthcontroller_showlogin",
+      "app_core_auth",
+      "app_core_auth_auth",
+      "app_core_auth_auth_attempt",
+      "app_core_auth_auth_check",
+      "app_core_auth_auth_logout",
+      "app_core_session",
+      "app_core_session_session",
+      "app_core_session_session_destroy",
+      "app_core_session_session_flash",
+      "app_core_session_session_get",
+      "app_core_session_session_regenerate",
+      "app_core_session_session_remove",
+      "app_core_session_session_set",
+      "app_core_session_session_start",
+      "app_middleware_authmiddleware_authmiddleware_handle",
+      "app_models_admin",
+      "app_models_admin_admin",
+      "app_models_admin_admin_create",
+      "app_models_admin_admin_findbyusername"
+    ],
+    "1": [
+      "app_controllers_admin_admindashboardcontroller",
+      "app_controllers_admin_admindashboardcontroller_admindashboardcontroller",
+      "app_controllers_admin_admindashboardcontroller_admindashboardcontroller_index",
+      "app_controllers_contactcontroller",
+      "app_controllers_contactcontroller_contactcontroller",
+      "app_controllers_contactcontroller_contactcontroller_index",
+      "app_controllers_homecontroller",
+      "app_controllers_homecontroller_homecontroller",
+      "app_controllers_homecontroller_homecontroller_index",
+      "app_controllers_productcontroller",
+      "app_controllers_productcontroller_productcontroller",
+      "app_controllers_productcontroller_productcontroller_index",
+      "app_controllers_productcontroller_productcontroller_show",
+      "app_controllers_sitemapcontroller",
+      "app_controllers_sitemapcontroller_sitemapcontroller",
+      "app_controllers_sitemapcontroller_sitemapcontroller_index",
+      "app_core_controller",
+      "app_core_controller_controller",
+      "app_core_controller_controller_notfound",
+      "app_core_controller_controller_redirect",
+      "app_core_controller_controller_render",
+      "app_core_env",
+      "app_core_env_env",
+      "app_core_env_env_get"
+    ],
+    "2": [
+      "app_controllers_admin_adminproductcontroller",
+      "app_controllers_admin_adminproductcontroller_adminproductcontroller",
+      "app_controllers_admin_adminproductcontroller_adminproductcontroller_create",
+      "app_controllers_admin_adminproductcontroller_adminproductcontroller_destroyimage",
+      "app_controllers_admin_adminproductcontroller_adminproductcontroller_edit",
+      "app_controllers_admin_adminproductcontroller_adminproductcontroller_guardarimagenes",
+      "app_controllers_admin_adminproductcontroller_adminproductcontroller_index",
+      "app_controllers_admin_adminproductcontroller_adminproductcontroller_optimizarimagen",
+      "app_controllers_admin_adminproductcontroller_adminproductcontroller_setimagenprincipal",
+      "app_controllers_admin_adminproductcontroller_adminproductcontroller_store",
+      "app_controllers_admin_adminproductcontroller_adminproductcontroller_toggledestacado",
+      "app_controllers_admin_adminproductcontroller_adminproductcontroller_update",
+      "app_middleware_authmiddleware",
+      "app_middleware_authmiddleware_authmiddleware",
+      "app_middleware_csrfmiddleware",
+      "app_middleware_csrfmiddleware_csrfmiddleware",
+      "app_models_category",
+      "app_models_category_category",
+      "app_models_category_category_all",
+      "app_models_category_category_findbyid",
+      "app_models_category_category_findbyslug"
+    ],
+    "3": [
+      "app_core_env_env_load",
+      "app_core_request",
+      "app_core_request_request",
+      "app_core_request_request_file",
+      "app_core_request_request_input",
+      "app_core_request_request_method",
+      "app_core_request_request_path",
+      "app_core_request_request_query",
+      "database_migrate_legacy",
+      "database_migrate_legacy_generarslug",
+      "database_migrate_legacy_limpiarnombre",
+      "database_migrate_legacy_parsearinfotxt",
+      "database_migrate_legacy_parsearprecio",
+      "database_migrate_legacy_php_pdo"
+    ],
+    "4": [
+      "app_models_product",
+      "app_models_product_product",
+      "app_models_product_product_all",
+      "app_models_product_product_countall",
+      "app_models_product_product_create",
+      "app_models_product_product_delete",
+      "app_models_product_product_destacados",
+      "app_models_product_product_findbyid",
+      "app_models_product_product_findbyslug",
+      "app_models_product_product_generarslugunico",
+      "app_models_product_product_imagenesde",
+      "app_models_product_product_slugexists",
+      "app_models_product_product_toggledestacado",
+      "app_models_product_product_update"
+    ],
+    "5": [
+      "app_controllers_productcontroller_productcontroller_redirectlegacy",
+      "app_core_database",
+      "app_core_database_database",
+      "app_core_database_database_connection",
+      "app_core_database_php_pdo",
+      "app_core_model",
+      "app_core_model_model",
+      "app_core_model_model_construct",
+      "app_core_model_php_pdo",
+      "app_models_legacyredirect",
+      "app_models_legacyredirect_legacyredirect",
+      "app_models_legacyredirect_legacyredirect_registrar",
+      "app_models_legacyredirect_legacyredirect_resolver"
+    ],
+    "6": [
+      "app_controllers_admin_adminproductcontroller_adminproductcontroller_destroy",
+      "app_core_helpers_app_log",
+      "app_models_productimage",
+      "app_models_productimage_productimage",
+      "app_models_productimage_productimage_agregardesdeupload",
+      "app_models_productimage_productimage_carpetaproducto",
+      "app_models_productimage_productimage_eliminar",
+      "app_models_productimage_productimage_eliminarcarpetaproducto",
+      "app_models_productimage_productimage_hacerprincipal",
+      "app_models_productimage_productimage_optimizarawebp",
+      "app_models_productimage_productimage_procesarimagen",
+      "app_models_productimage_productimage_validar"
+    ],
+    "7": [
+      "app_core_helpers",
+      "app_core_helpers_csrf_field",
+      "app_core_helpers_csrf_token",
+      "app_core_helpers_csrf_verify",
+      "app_core_helpers_e",
+      "app_core_helpers_old",
+      "app_core_helpers_redirect",
+      "app_core_helpers_whatsapp_link",
+      "app_middleware_csrfmiddleware_csrfmiddleware_verify"
+    ],
+    "8": [
+      "public_html_legacy_20260715_includes_db_functions",
+      "public_html_legacy_20260715_includes_db_functions_crearproducto",
+      "public_html_legacy_20260715_includes_db_functions_eliminarproducto",
+      "public_html_legacy_20260715_includes_db_functions_getwhatsapplink",
+      "public_html_legacy_20260715_includes_db_functions_getwhatsapplinkgeneral",
+      "public_html_legacy_20260715_includes_db_functions_guardarproducto",
+      "public_html_legacy_20260715_includes_db_functions_obtenerproductoporid",
+      "public_html_legacy_20260715_includes_db_functions_obtenerproductos",
+      "public_html_legacy_20260715_includes_db_functions_sanitizarnombrecarpeta"
+    ],
+    "9": [
+      "public_html_legacy_20260715_includes_db",
+      "public_html_legacy_20260715_includes_db_crearproducto",
+      "public_html_legacy_20260715_includes_db_eliminarproducto",
+      "public_html_legacy_20260715_includes_db_guardarproducto",
+      "public_html_legacy_20260715_includes_db_obtenerproductoporid",
+      "public_html_legacy_20260715_includes_db_obtenerproductos",
+      "public_html_legacy_20260715_includes_db_sanitizarnombrecarpeta"
+    ],
+    "10": [
+      "app_core_router",
+      "app_core_router_router",
+      "app_core_router_router_add",
+      "app_core_router_router_dispatch",
+      "app_core_router_router_get",
+      "app_core_router_router_post"
+    ],
+    "11": [
+      "database_schema",
+      "database_schema_admins",
+      "database_schema_legacy_slug_map",
+      "database_schema_product_images",
+      "database_schema_products"
+    ],
+    "12": [
+      "app_core_view",
+      "app_core_view_view",
+      "app_core_view_view_capture",
+      "app_core_view_view_render"
+    ],
+    "13": [
+      "public_html_legacy_20260715_includes_structured_data",
+      "public_html_legacy_20260715_includes_structured_data_generatecontactstructureddata",
+      "public_html_legacy_20260715_includes_structured_data_generateproductliststructureddata",
+      "public_html_legacy_20260715_includes_structured_data_generateproductstructureddata"
+    ],
+    "14": [
+      "public_html_legacy_20260715_admin_login_process",
+      "public_html_legacy_20260715_admin_login_process_getadminpassword",
+      "public_html_legacy_20260715_admin_login_process_getadminusername"
+    ],
+    "15": [
+      "public_html_assets_js_admin_productos",
+      "public_html_assets_js_admin_productos_aplicarbusqueda"
+    ],
+    "16": [
+      "public_html_assets_js_galeria",
+      "public_html_assets_js_galeria_mostrar"
+    ],
+    "17": [
+      "app_views_admin_dashboard"
+    ],
+    "18": [
+      "app_views_admin_login"
+    ],
+    "19": [
+      "app_views_admin_productos_form"
+    ],
+    "20": [
+      "app_views_admin_productos_index"
+    ],
+    "21": [
+      "app_views_contacto_index"
+    ],
+    "22": [
+      "app_views_errors_404"
+    ],
+    "23": [
+      "app_views_home_index"
+    ],
+    "24": [
+      "app_views_layouts_admin"
+    ],
+    "25": [
+      "app_views_layouts_admin_guest"
+    ],
+    "26": [
+      "app_views_layouts_main"
+    ],
+    "27": [
+      "app_views_productos_card"
+    ],
+    "28": [
+      "app_views_productos_index"
+    ],
+    "29": [
+      "app_views_productos_show"
+    ],
+    "30": [
+      "database_create_admin"
+    ],
+    "31": [
+      "public_html_assets_js_admin"
+    ],
+    "32": [
+      "public_html_assets_js_admin_confirm"
+    ],
+    "33": [
+      "public_html_assets_js_catalogo"
+    ],
+    "34": [
+      "public_html_assets_js_menu"
+    ],
+    "35": [
+      "public_html_index"
+    ],
+    "36": [
+      "public_html_legacy_20260715_404"
+    ],
+    "37": [
+      "public_html_legacy_20260715_admin_agregar_producto"
+    ],
+    "38": [
+      "public_html_legacy_20260715_admin_auth_check"
+    ],
+    "39": [
+      "public_html_legacy_20260715_admin_crear_ejemplo"
+    ],
+    "40": [
+      "public_html_legacy_20260715_admin_editar_producto"
+    ],
+    "41": [
+      "public_html_legacy_20260715_admin_eliminar_imagen"
+    ],
+    "42": [
+      "public_html_legacy_20260715_admin_eliminar_producto"
+    ],
+    "43": [
+      "public_html_legacy_20260715_admin_eliminar_video"
+    ],
+    "44": [
+      "public_html_legacy_20260715_admin_includes_footer"
+    ],
+    "45": [
+      "public_html_legacy_20260715_admin_includes_header"
+    ],
+    "46": [
+      "public_html_legacy_20260715_admin_index"
+    ],
+    "47": [
+      "public_html_legacy_20260715_admin_login"
+    ],
+    "48": [
+      "public_html_legacy_20260715_admin_logout"
+    ],
+    "49": [
+      "public_html_legacy_20260715_admin_productos"
+    ],
+    "50": [
+      "public_html_legacy_20260715_contacto"
+    ],
+    "51": [
+      "public_html_legacy_20260715_default"
+    ],
+    "52": [
+      "public_html_legacy_20260715_generate_favicon"
+    ],
+    "53": [
+      "public_html_legacy_20260715_includes_footer"
+    ],
+    "54": [
+      "public_html_legacy_20260715_includes_header"
+    ],
+    "55": [
+      "public_html_legacy_20260715_includes_login_modal"
+    ],
+    "56": [
+      "public_html_legacy_20260715_includes_navbar"
+    ],
+    "57": [
+      "public_html_legacy_20260715_includes_whatsapp_button"
+    ],
+    "58": [
+      "public_html_legacy_20260715_index"
+    ],
+    "59": [
+      "public_html_legacy_20260715_indexant"
+    ],
+    "60": [
+      "public_html_legacy_20260715_init"
+    ],
+    "61": [
+      "public_html_legacy_20260715_productos_detalle"
+    ],
+    "62": [
+      "public_html_legacy_20260715_productos_index"
+    ],
+    "63": [
+      "public_html_legacy_20260715_productos_todos"
+    ],
+    "64": [
+      "public_html_legacy_20260715_test_storage"
+    ]
+  },
+  "cohesion": {
+    "0": 0.10144927536231885,
+    "1": 0.09782608695652174,
+    "2": 0.1761904761904762,
+    "3": 0.14285714285714285,
+    "4": 0.1978021978021978,
+    "5": 0.16666666666666666,
+    "6": 0.25757575757575757,
+    "7": 0.3333333333333333,
+    "8": 0.3055555555555556,
+    "9": 0.3333333333333333,
+    "10": 0.4666666666666667,
+    "11": 0.5,
+    "12": 0.5,
+    "13": 0.5,
+    "14": 0.6666666666666666,
+    "15": 1.0,
+    "16": 1.0,
+    "17": 1.0,
+    "18": 1.0,
+    "19": 1.0,
+    "20": 1.0,
+    "21": 1.0,
+    "22": 1.0,
+    "23": 1.0,
+    "24": 1.0,
+    "25": 1.0,
+    "26": 1.0,
+    "27": 1.0,
+    "28": 1.0,
+    "29": 1.0,
+    "30": 1.0,
+    "31": 1.0,
+    "32": 1.0,
+    "33": 1.0,
+    "34": 1.0,
+    "35": 1.0,
+    "36": 1.0,
+    "37": 1.0,
+    "38": 1.0,
+    "39": 1.0,
+    "40": 1.0,
+    "41": 1.0,
+    "42": 1.0,
+    "43": 1.0,
+    "44": 1.0,
+    "45": 1.0,
+    "46": 1.0,
+    "47": 1.0,
+    "48": 1.0,
+    "49": 1.0,
+    "50": 1.0,
+    "51": 1.0,
+    "52": 1.0,
+    "53": 1.0,
+    "54": 1.0,
+    "55": 1.0,
+    "56": 1.0,
+    "57": 1.0,
+    "58": 1.0,
+    "59": 1.0,
+    "60": 1.0,
+    "61": 1.0,
+    "62": 1.0,
+    "63": 1.0,
+    "64": 1.0
+  },
+  "gods": [
+    {
+      "id": "app_models_product_product",
+      "label": "Product",
+      "degree": 27
+    },
+    {
+      "id": "app_core_session_session",
+      "label": "Session",
+      "degree": 19
+    },
+    {
+      "id": "app_models_productimage_productimage",
+      "label": "ProductImage",
+      "degree": 15
+    },
+    {
+      "id": "app_controllers_admin_adminproductcontroller_adminproductcontroller",
+      "label": "AdminProductController",
+      "degree": 13
+    },
+    {
+      "id": "app_middleware_authmiddleware_authmiddleware",
+      "label": "AuthMiddleware",
+      "degree": 13
+    },
+    {
+      "id": "app_core_controller_controller",
+      "label": "Controller",
+      "degree": 11
+    },
+    {
+      "id": "app_core_env_env",
+      "label": "Env",
+      "degree": 10
+    },
+    {
+      "id": "app_middleware_csrfmiddleware_csrfmiddleware",
+      "label": "CsrfMiddleware",
+      "degree": 10
+    },
+    {
+      "id": "app_core_auth_auth",
+      "label": "Auth",
+      "degree": 8
+    },
+    {
+      "id": "app_models_category_category",
+      "label": "Category",
+      "degree": 8
+    }
+  ],
+  "surprises": [
+    {
+      "source": "whatsapp_link()",
+      "target": "Env",
+      "source_files": [
+        "app/Core/helpers.php",
+        "app/Core/Env.php"
+      ],
+      "confidence": "INFERRED",
+      "relation": "calls",
+      "why": "inferred connection - not explicitly stated in source; bridges separate communities; peripheral node `whatsapp_link()` unexpectedly reaches hub `Env`"
+    },
+    {
+      "source": "csrf_token()",
+      "target": "Session",
+      "source_files": [
+        "app/Core/helpers.php",
+        "app/Core/Session.php"
+      ],
+      "confidence": "INFERRED",
+      "relation": "calls",
+      "why": "inferred connection - not explicitly stated in source; bridges separate communities"
+    },
+    {
+      "source": "AdminAuthController",
+      "target": "Controller",
+      "source_files": [
+        "app/Controllers/Admin/AdminAuthController.php",
+        "app/Core/Controller.php"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "inherits",
+      "why": "bridges separate communities"
+    },
+    {
+      "source": "Admin",
+      "target": "Model",
+      "source_files": [
+        "app/Models/Admin.php",
+        "app/Core/Model.php"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "inherits",
+      "why": "bridges separate communities"
+    },
+    {
+      "source": "AdminProductController",
+      "target": "Controller",
+      "source_files": [
+        "app/Controllers/Admin/AdminProductController.php",
+        "app/Core/Controller.php"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "inherits",
+      "why": "bridges separate communities"
+    }
+  ],
+  "questions": [
+    {
+      "type": "bridge_node",
+      "question": "Why does `Product` connect `Product` to `Controller`, `AdminProductController`, `Model`, `ProductImage`?",
+      "why": "High betweenness centrality (0.142) - this node is a cross-community bridge."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `Env` connect `Controller` to `Request`, `Model`, `helpers.php`?",
+      "why": "High betweenness centrality (0.095) - this node is a cross-community bridge."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `Session` connect `Session` to `AdminProductController`, `ProductImage`, `helpers.php`?",
+      "why": "High betweenness centrality (0.071) - this node is a cross-community bridge."
+    },
+    {
+      "type": "verify_inferred",
+      "question": "Are the 13 inferred relationships involving `Product` (e.g. with `.index()` and `.destroy()`) actually correct?",
+      "why": "`Product` has 13 INFERRED edges - model-reasoned connections that need verification."
+    },
+    {
+      "type": "verify_inferred",
+      "question": "Are the 11 inferred relationships involving `Session` (e.g. with `.login()` and `.destroy()`) actually correct?",
+      "why": "`Session` has 11 INFERRED edges - model-reasoned connections that need verification."
+    },
+    {
+      "type": "verify_inferred",
+      "question": "Are the 5 inferred relationships involving `ProductImage` (e.g. with `.destroy()` and `.destroyImage()`) actually correct?",
+      "why": "`ProductImage` has 5 INFERRED edges - model-reasoned connections that need verification."
+    },
+    {
+      "type": "verify_inferred",
+      "question": "Are the 11 inferred relationships involving `AuthMiddleware` (e.g. with `.index()` and `.create()`) actually correct?",
+      "why": "`AuthMiddleware` has 11 INFERRED edges - model-reasoned connections that need verification."
+    }
+  ]
+}

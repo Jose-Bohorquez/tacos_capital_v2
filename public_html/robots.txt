@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+Allow: /productos
+Allow: /producto/
+Allow: /contacto
+Allow: /assets/
+
+Disallow: /admin/
+Disallow: /uploads/
+
+Sitemap: https://tacoscapital.com/sitemap.xml

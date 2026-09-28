@@ -1,0 +1,554 @@
+{
+  "app/Controllers/Admin/AdminAuthController.php": {
+    "mtime": 1784088339.0,
+    "seen": 1790574738.37537,
+    "ast_hash": "940480988c6e549bd227f6dc1d18d18d",
+    "semantic_hash": "940480988c6e549bd227f6dc1d18d18d"
+  },
+  "app/Controllers/Admin/AdminDashboardController.php": {
+    "mtime": 1784091133.0,
+    "seen": 1790574738.3753753,
+    "ast_hash": "c6c5cc9dd5646178c5ecb7d548b88f0f",
+    "semantic_hash": "c6c5cc9dd5646178c5ecb7d548b88f0f"
+  },
+  "app/Controllers/Admin/AdminProductController.php": {
+    "mtime": 1784094348.0,
+    "seen": 1790574738.375378,
+    "ast_hash": "6e4f8732694271502c84e8c17b81dd84",
+    "semantic_hash": "6e4f8732694271502c84e8c17b81dd84"
+  },
+  "app/Controllers/ContactController.php": {
+    "mtime": 1784088337.0,
+    "seen": 1790574738.375379,
+    "ast_hash": "f4f3a817298db4031c1cbba3d0707fa5",
+    "semantic_hash": "f4f3a817298db4031c1cbba3d0707fa5"
+  },
+  "app/Controllers/HomeController.php": {
+    "mtime": 1785219676.0,
+    "seen": 1790574738.37538,
+    "ast_hash": "73798ec1e40f3e9ce1de08bf8b2cc6fd",
+    "semantic_hash": "73798ec1e40f3e9ce1de08bf8b2cc6fd"
+  },
+  "app/Controllers/ProductController.php": {
+    "mtime": 1785215828.0,
+    "seen": 1790574738.3753808,
+    "ast_hash": "6226409dd6dbdcfb46e6674a845d4641",
+    "semantic_hash": "6226409dd6dbdcfb46e6674a845d4641"
+  },
+  "app/Controllers/SitemapController.php": {
+    "mtime": 1784088746.0,
+    "seen": 1790574738.3753815,
+    "ast_hash": "0135473ec1552d397350fa4d3a15be1c",
+    "semantic_hash": "0135473ec1552d397350fa4d3a15be1c"
+  },
+  "app/Core/Auth.php": {
+    "mtime": 1784088342.0,
+    "seen": 1790574738.3753822,
+    "ast_hash": "927a3813f41d6007041b210ee7397307",
+    "semantic_hash": "927a3813f41d6007041b210ee7397307"
+  },
+  "app/Core/Controller.php": {
+    "mtime": 1784088341.0,
+    "seen": 1790574738.375383,
+    "ast_hash": "34a2d16361f6c9a4d82a20256338e4eb",
+    "semantic_hash": "34a2d16361f6c9a4d82a20256338e4eb"
+  },
+  "app/Core/Database.php": {
+    "mtime": 1784088343.0,
+    "seen": 1790574738.3753836,
+    "ast_hash": "ab4706a6a393685e2e3904d191aa2f01",
+    "semantic_hash": "ab4706a6a393685e2e3904d191aa2f01"
+  },
+  "app/Core/Env.php": {
+    "mtime": 1784088344.0,
+    "seen": 1790574738.375384,
+    "ast_hash": "d46255634f49237b8cecf4a212e8fa72",
+    "semantic_hash": "d46255634f49237b8cecf4a212e8fa72"
+  },
+  "app/Core/Model.php": {
+    "mtime": 1784088343.0,
+    "seen": 1790574738.3753848,
+    "ast_hash": "69da29b559b540dadc2497323b6a5c46",
+    "semantic_hash": "69da29b559b540dadc2497323b6a5c46"
+  },
+  "app/Core/Request.php": {
+    "mtime": 1784088341.0,
+    "seen": 1790574738.3753855,
+    "ast_hash": "bfe34c488229d86032943179053d014c",
+    "semantic_hash": "bfe34c488229d86032943179053d014c"
+  },
+  "app/Core/Router.php": {
+    "mtime": 1785218574.0,
+    "seen": 1790574738.3753865,
+    "ast_hash": "d21ec051a1c806dfb40e1152ae52b882",
+    "semantic_hash": "d21ec051a1c806dfb40e1152ae52b882"
+  },
+  "app/Core/Session.php": {
+    "mtime": 1784088343.0,
+    "seen": 1790574738.375387,
+    "ast_hash": "dc9efa4a2f3c41ea1fe4638d2a3b6ca7",
+    "semantic_hash": "dc9efa4a2f3c41ea1fe4638d2a3b6ca7"
+  },
+  "app/Core/View.php": {
+    "mtime": 1784088341.0,
+    "seen": 1790574738.3753877,
+    "ast_hash": "d0df59fd7d4ed17d41f20a0efbdc68d9",
+    "semantic_hash": "d0df59fd7d4ed17d41f20a0efbdc68d9"
+  },
+  "app/Core/helpers.php": {
+    "mtime": 1784088342.0,
+    "seen": 1790574738.3753881,
+    "ast_hash": "5451c273d0accf133704c39e56fe20cd",
+    "semantic_hash": "5451c273d0accf133704c39e56fe20cd"
+  },
+  "app/Middleware/AuthMiddleware.php": {
+    "mtime": 1784088340.0,
+    "seen": 1790574738.3753886,
+    "ast_hash": "885c94a0b0ab70c93241550adfc8c422",
+    "semantic_hash": "885c94a0b0ab70c93241550adfc8c422"
+  },
+  "app/Middleware/CsrfMiddleware.php": {
+    "mtime": 1784088339.0,
+    "seen": 1790574738.3753893,
+    "ast_hash": "f4572d6f3a8a7c5dec6d0e36581cfccc",
+    "semantic_hash": "f4572d6f3a8a7c5dec6d0e36581cfccc"
+  },
+  "app/Models/Admin.php": {
+    "mtime": 1784088336.0,
+    "seen": 1790574738.37539,
+    "ast_hash": "ec7671d679a02d873069ac5a3b432d7d",
+    "semantic_hash": "ec7671d679a02d873069ac5a3b432d7d"
+  },
+  "app/Models/Category.php": {
+    "mtime": 1784094344.0,
+    "seen": 1790574738.3753908,
+    "ast_hash": "8f7bf0ed4e3e3b07e0ac25164316e161",
+    "semantic_hash": "8f7bf0ed4e3e3b07e0ac25164316e161"
+  },
+  "app/Models/LegacyRedirect.php": {
+    "mtime": 1784088335.0,
+    "seen": 1790574738.3753915,
+    "ast_hash": "802c4823a1606333bd28e487996bdd18",
+    "semantic_hash": "802c4823a1606333bd28e487996bdd18"
+  },
+  "app/Models/Product.php": {
+    "mtime": 1785215826.0,
+    "seen": 1790574738.3753922,
+    "ast_hash": "f6a1c186dfc60c67cb2b0dc0230acb70",
+    "semantic_hash": "f6a1c186dfc60c67cb2b0dc0230acb70"
+  },
+  "app/Models/ProductImage.php": {
+    "mtime": 1784092459.0,
+    "seen": 1790574738.3753927,
+    "ast_hash": "476ac0fbc8b021b9a04f2a9f39d4e4b5",
+    "semantic_hash": "476ac0fbc8b021b9a04f2a9f39d4e4b5"
+  },
+  "app/Views/admin/dashboard.php": {
+    "mtime": 1785215274.0,
+    "seen": 1790574738.3753936,
+    "ast_hash": "7b971ab5afa541cc88c6c6b919e6eddc",
+    "semantic_hash": "7b971ab5afa541cc88c6c6b919e6eddc"
+  },
+  "app/Views/admin/login.php": {
+    "mtime": 1785215277.0,
+    "seen": 1790574738.375394,
+    "ast_hash": "da9d7c0d73fd9f7a9858b7c3c42c6a82",
+    "semantic_hash": "da9d7c0d73fd9f7a9858b7c3c42c6a82"
+  },
+  "app/Views/admin/productos/form.php": {
+    "mtime": 1785215279.0,
+    "seen": 1790574738.3753948,
+    "ast_hash": "d320226ff3db280e25b29c59ca9a8acc",
+    "semantic_hash": "d320226ff3db280e25b29c59ca9a8acc"
+  },
+  "app/Views/admin/productos/index.php": {
+    "mtime": 1790566405.5456913,
+    "seen": 1790574738.3753953,
+    "ast_hash": "a71a2ebc324928ca75fc6b607043dbc5",
+    "semantic_hash": "a71a2ebc324928ca75fc6b607043dbc5"
+  },
+  "app/Views/contacto/index.php": {
+    "mtime": 1785215282.0,
+    "seen": 1790574738.3753958,
+    "ast_hash": "1926ba0cde7220540a75520da6500e14",
+    "semantic_hash": "1926ba0cde7220540a75520da6500e14"
+  },
+  "app/Views/errors/404.php": {
+    "mtime": 1784088328.0,
+    "seen": 1790574738.3753965,
+    "ast_hash": "1fddb86171e06ea83732da2367704030",
+    "semantic_hash": "1fddb86171e06ea83732da2367704030"
+  },
+  "app/Views/home/index.php": {
+    "mtime": 1785215284.0,
+    "seen": 1790574738.3753972,
+    "ast_hash": "b6d6a97adc66eaea181be59a5c7590bf",
+    "semantic_hash": "b6d6a97adc66eaea181be59a5c7590bf"
+  },
+  "app/Views/layouts/admin-guest.php": {
+    "mtime": 1784088333.0,
+    "seen": 1790574738.3753977,
+    "ast_hash": "9a8b7da02e7602a16d78adb85fab1868",
+    "semantic_hash": "9a8b7da02e7602a16d78adb85fab1868"
+  },
+  "app/Views/layouts/admin.php": {
+    "mtime": 1785215286.0,
+    "seen": 1790574738.3753984,
+    "ast_hash": "909cf76e04e8249583e6d8aa54fd1b0d",
+    "semantic_hash": "909cf76e04e8249583e6d8aa54fd1b0d"
+  },
+  "app/Views/layouts/main.php": {
+    "mtime": 1785219678.0,
+    "seen": 1790574738.3753989,
+    "ast_hash": "7ace6ce76744b342713921fcc98c8c95",
+    "semantic_hash": "7ace6ce76744b342713921fcc98c8c95"
+  },
+  "app/Views/productos/_card.php": {
+    "mtime": 1785215290.0,
+    "seen": 1790574738.3753994,
+    "ast_hash": "320db61d3f92f3491ad5767a81313304",
+    "semantic_hash": "320db61d3f92f3491ad5767a81313304"
+  },
+  "app/Views/productos/index.php": {
+    "mtime": 1785215830.0,
+    "seen": 1790574738.3754003,
+    "ast_hash": "90ec618efb4bd71bdb028fa4565e2810",
+    "semantic_hash": "90ec618efb4bd71bdb028fa4565e2810"
+  },
+  "app/Views/productos/show.php": {
+    "mtime": 1785218027.0,
+    "seen": 1790574738.3754008,
+    "ast_hash": "c72c8ebfc77f4464651f44b767dd9c8e",
+    "semantic_hash": "c72c8ebfc77f4464651f44b767dd9c8e"
+  },
+  "database/create_admin.php": {
+    "mtime": 1784088348.0,
+    "seen": 1790574738.3754013,
+    "ast_hash": "ce53a654fd1567b872850dd91da70fc8",
+    "semantic_hash": "ce53a654fd1567b872850dd91da70fc8"
+  },
+  "database/migrate_legacy.php": {
+    "mtime": 1784088943.0,
+    "seen": 1790574738.3754017,
+    "ast_hash": "e64699709b03ac346e1e3a767d5a9ed7",
+    "semantic_hash": "e64699709b03ac346e1e3a767d5a9ed7"
+  },
+  "database/schema.sql": {
+    "mtime": 1784088349.0,
+    "seen": 1790574738.3754025,
+    "ast_hash": "08437c30f0e3d01d425f0ab53ca6af0c",
+    "semantic_hash": "08437c30f0e3d01d425f0ab53ca6af0c"
+  },
+  "public_html/assets/js/admin-confirm.js": {
+    "mtime": 1784092966.0,
+    "seen": 1790574738.375403,
+    "ast_hash": "3d2e91ae27bff7ff4f72fc8353d6c18b",
+    "semantic_hash": "3d2e91ae27bff7ff4f72fc8353d6c18b"
+  },
+  "public_html/assets/js/admin-productos.js": {
+    "mtime": 1790566075.9586668,
+    "seen": 1790574738.375404,
+    "ast_hash": "6167643afe40442b0de39db22e24fb41",
+    "semantic_hash": "6167643afe40442b0de39db22e24fb41"
+  },
+  "public_html/assets/js/admin.js": {
+    "mtime": 1784091118.0,
+    "seen": 1790574738.3754044,
+    "ast_hash": "d8eeade331cb5276588c442178107db9",
+    "semantic_hash": "d8eeade331cb5276588c442178107db9"
+  },
+  "public_html/assets/js/catalogo.js": {
+    "mtime": 1784094340.0,
+    "seen": 1790574738.3754053,
+    "ast_hash": "e6f76447ae23695baee2a2d90895dc9c",
+    "semantic_hash": "e6f76447ae23695baee2a2d90895dc9c"
+  },
+  "public_html/assets/js/galeria.js": {
+    "mtime": 1784089823.0,
+    "seen": 1790574738.375406,
+    "ast_hash": "b03340b5fa68a652801745ff2e28bbff",
+    "semantic_hash": "b03340b5fa68a652801745ff2e28bbff"
+  },
+  "public_html/assets/js/menu.js": {
+    "mtime": 1784089819.0,
+    "seen": 1790574738.3754065,
+    "ast_hash": "4d37dbbf97092805e1657565bcae2ea0",
+    "semantic_hash": "4d37dbbf97092805e1657565bcae2ea0"
+  },
+  "public_html/index.php": {
+    "mtime": 1784092463.0,
+    "seen": 1790574738.3754072,
+    "ast_hash": "e2930681101e13479b4b54d6fefffbbd",
+    "semantic_hash": "e2930681101e13479b4b54d6fefffbbd"
+  },
+  "public_html_legacy_20260715/404.php": {
+    "mtime": 1743842797.0,
+    "seen": 1790574738.3754077,
+    "ast_hash": "32dbbb6f60c76e06ebdf0481507189d5",
+    "semantic_hash": "32dbbb6f60c76e06ebdf0481507189d5"
+  },
+  "public_html_legacy_20260715/admin/agregar-producto.php": {
+    "mtime": 1743842798.0,
+    "seen": 1790574738.3754084,
+    "ast_hash": "509c6e6fdd68db80d236160d2601d367",
+    "semantic_hash": "509c6e6fdd68db80d236160d2601d367"
+  },
+  "public_html_legacy_20260715/admin/auth_check.php": {
+    "mtime": 1743842798.0,
+    "seen": 1790574738.375409,
+    "ast_hash": "d23b6a8574db7264376170c3b00b45ba",
+    "semantic_hash": "d23b6a8574db7264376170c3b00b45ba"
+  },
+  "public_html_legacy_20260715/admin/crear-ejemplo.php": {
+    "mtime": 1743842798.0,
+    "seen": 1790574738.3754094,
+    "ast_hash": "e5f512bf6b8fb9ff1e8278ad01d43ba8",
+    "semantic_hash": "e5f512bf6b8fb9ff1e8278ad01d43ba8"
+  },
+  "public_html_legacy_20260715/admin/editar-producto.php": {
+    "mtime": 1743842798.0,
+    "seen": 1790574738.37541,
+    "ast_hash": "03ad11cd44cfa91ac8245b5ac2e59ba4",
+    "semantic_hash": "03ad11cd44cfa91ac8245b5ac2e59ba4"
+  },
+  "public_html_legacy_20260715/admin/eliminar-imagen.php": {
+    "mtime": 1743842798.0,
+    "seen": 1790574738.3754108,
+    "ast_hash": "bdbcf4837cf78eb41fb7bce72e74d146",
+    "semantic_hash": "bdbcf4837cf78eb41fb7bce72e74d146"
+  },
+  "public_html_legacy_20260715/admin/eliminar-producto.php": {
+    "mtime": 1743842798.0,
+    "seen": 1790574738.3754113,
+    "ast_hash": "48ef0b0ddd1d429bf273b288ecdef68a",
+    "semantic_hash": "48ef0b0ddd1d429bf273b288ecdef68a"
+  },
+  "public_html_legacy_20260715/admin/eliminar-video.php": {
+    "mtime": 1743842798.0,
+    "seen": 1790574738.375412,
+    "ast_hash": "d136ee07dee34245fb9b2002e876e0d0",
+    "semantic_hash": "d136ee07dee34245fb9b2002e876e0d0"
+  },
+  "public_html_legacy_20260715/admin/includes/footer.php": {
+    "mtime": 1743842799.0,
+    "seen": 1790574738.3754125,
+    "ast_hash": "77914e5acbb409991dae08ca504f4290",
+    "semantic_hash": "77914e5acbb409991dae08ca504f4290"
+  },
+  "public_html_legacy_20260715/admin/includes/header.php": {
+    "mtime": 1743842799.0,
+    "seen": 1790574738.375413,
+    "ast_hash": "4c807a116aa1c09b0a186b43bbf4da24",
+    "semantic_hash": "4c807a116aa1c09b0a186b43bbf4da24"
+  },
+  "public_html_legacy_20260715/admin/index.php": {
+    "mtime": 1743842798.0,
+    "seen": 1790574738.3754137,
+    "ast_hash": "20420f737995ec87ab0e1f02ca4ef67a",
+    "semantic_hash": "20420f737995ec87ab0e1f02ca4ef67a"
+  },
+  "public_html_legacy_20260715/admin/login-process.php": {
+    "mtime": 1743842799.0,
+    "seen": 1790574738.3754144,
+    "ast_hash": "c1917945e3775291e9792c2a2707cce6",
+    "semantic_hash": "c1917945e3775291e9792c2a2707cce6"
+  },
+  "public_html_legacy_20260715/admin/login.php": {
+    "mtime": 1743842799.0,
+    "seen": 1790574738.3754148,
+    "ast_hash": "23eab0c0f227265ed9bc93fa9eda3cb1",
+    "semantic_hash": "23eab0c0f227265ed9bc93fa9eda3cb1"
+  },
+  "public_html_legacy_20260715/admin/logout.php": {
+    "mtime": 1743842799.0,
+    "seen": 1790574738.3754153,
+    "ast_hash": "5074259532cbda6ca702d1d011ba1102",
+    "semantic_hash": "5074259532cbda6ca702d1d011ba1102"
+  },
+  "public_html_legacy_20260715/admin/productos.php": {
+    "mtime": 1743842799.0,
+    "seen": 1790574738.375416,
+    "ast_hash": "b59c23958ed3809cd028f9d6dbe5f1da",
+    "semantic_hash": "b59c23958ed3809cd028f9d6dbe5f1da"
+  },
+  "public_html_legacy_20260715/contacto.php": {
+    "mtime": 1784085088.0,
+    "seen": 1790574738.3754165,
+    "ast_hash": "c31f794f9fa454012a9830ecba02b869",
+    "semantic_hash": "c31f794f9fa454012a9830ecba02b869"
+  },
+  "public_html_legacy_20260715/default.php": {
+    "mtime": 1757390269.0,
+    "seen": 1790574738.375417,
+    "ast_hash": "42d574119c483572a81c73cd5e1e5ff7",
+    "semantic_hash": "42d574119c483572a81c73cd5e1e5ff7"
+  },
+  "public_html_legacy_20260715/generate-favicon.php": {
+    "mtime": 1743842797.0,
+    "seen": 1790574738.375418,
+    "ast_hash": "7db01b897f7fa71c0589a396a4d06a90",
+    "semantic_hash": "7db01b897f7fa71c0589a396a4d06a90"
+  },
+  "public_html_legacy_20260715/includes/db.php": {
+    "mtime": 1743842797.0,
+    "seen": 1790574738.3754184,
+    "ast_hash": "f156776a84382a0d4ed9d8125d92e489",
+    "semantic_hash": "f156776a84382a0d4ed9d8125d92e489"
+  },
+  "public_html_legacy_20260715/includes/db_functions.php": {
+    "mtime": 1744420328.0,
+    "seen": 1790574738.375419,
+    "ast_hash": "7142d4938b2f16c512024bfe4fa14754",
+    "semantic_hash": "7142d4938b2f16c512024bfe4fa14754"
+  },
+  "public_html_legacy_20260715/includes/footer.php": {
+    "mtime": 1784085075.0,
+    "seen": 1790574738.3754194,
+    "ast_hash": "fca8809c065215f014f55151fb0fb762",
+    "semantic_hash": "fca8809c065215f014f55151fb0fb762"
+  },
+  "public_html_legacy_20260715/includes/header.php": {
+    "mtime": 1784085260.0,
+    "seen": 1790574738.37542,
+    "ast_hash": "64bc6e82bbb59720b4c483f2c912bc0f",
+    "semantic_hash": "64bc6e82bbb59720b4c483f2c912bc0f"
+  },
+  "public_html_legacy_20260715/includes/login-modal.php": {
+    "mtime": 1743842798.0,
+    "seen": 1790574738.3754206,
+    "ast_hash": "6368c91f03f03354537c612f73e6481d",
+    "semantic_hash": "6368c91f03f03354537c612f73e6481d"
+  },
+  "public_html_legacy_20260715/includes/navbar.php": {
+    "mtime": 1743842798.0,
+    "seen": 1790574738.3754213,
+    "ast_hash": "7dd1af14232cf4862fc29ba4c0da3005",
+    "semantic_hash": "7dd1af14232cf4862fc29ba4c0da3005"
+  },
+  "public_html_legacy_20260715/includes/structured_data.php": {
+    "mtime": 1784085262.0,
+    "seen": 1790574738.375422,
+    "ast_hash": "1b00d6e5398c8a83a6ba8c8aa0d2b5af",
+    "semantic_hash": "1b00d6e5398c8a83a6ba8c8aa0d2b5af"
+  },
+  "public_html_legacy_20260715/includes/whatsapp-button.php": {
+    "mtime": 1743842798.0,
+    "seen": 1790574738.3754227,
+    "ast_hash": "23c41340fdf48020d409bc32e57ec470",
+    "semantic_hash": "23c41340fdf48020d409bc32e57ec470"
+  },
+  "public_html_legacy_20260715/index.php": {
+    "mtime": 1784086100.0,
+    "seen": 1790574738.3754232,
+    "ast_hash": "d3824fb00c76332d430950e78a12173d",
+    "semantic_hash": "d3824fb00c76332d430950e78a12173d"
+  },
+  "public_html_legacy_20260715/indexant.php": {
+    "mtime": 1743842797.0,
+    "seen": 1790574738.3754237,
+    "ast_hash": "bbe137825f5f81d4ad9f4c5c0418d88d",
+    "semantic_hash": "bbe137825f5f81d4ad9f4c5c0418d88d"
+  },
+  "public_html_legacy_20260715/init.php": {
+    "mtime": 1743842797.0,
+    "seen": 1790574738.3754246,
+    "ast_hash": "cc303edd0164227f18c393cc70b15c0f",
+    "semantic_hash": "cc303edd0164227f18c393cc70b15c0f"
+  },
+  "public_html_legacy_20260715/productos/detalle.php": {
+    "mtime": 1784085075.0,
+    "seen": 1790574738.375425,
+    "ast_hash": "4d76efabc61c7f31d07ed6ab8e3c8e38",
+    "semantic_hash": "4d76efabc61c7f31d07ed6ab8e3c8e38"
+  },
+  "public_html_legacy_20260715/productos/index.php": {
+    "mtime": 1784085075.0,
+    "seen": 1790574738.3754256,
+    "ast_hash": "a6414474a5afc3f8ad486a892198fce3",
+    "semantic_hash": "a6414474a5afc3f8ad486a892198fce3"
+  },
+  "public_html_legacy_20260715/productos/todos.php": {
+    "mtime": 1784085075.0,
+    "seen": 1790574738.3754263,
+    "ast_hash": "9161255c238a41188aee5c8e75b2d0b2",
+    "semantic_hash": "9161255c238a41188aee5c8e75b2d0b2"
+  },
+  "public_html_legacy_20260715/test_storage.php": {
+    "mtime": 1743842797.0,
+    "seen": 1790574738.3754268,
+    "ast_hash": "126e0ca779c8feb10456be53ab6f4b97",
+    "semantic_hash": "126e0ca779c8feb10456be53ab6f4b97"
+  },
+  "public_html_legacy_20260715/assets/img/servicios/vambio_virola_y_casquillos.mp4": {
+    "mtime": 1747273594.0,
+    "seen": 1790574738.3754277,
+    "ast_hash": "16fec213feb9604f4258c27799dd78da",
+    "semantic_hash": "16fec213feb9604f4258c27799dd78da"
+  },
+  "public_html_legacy_20260715/storage/productos/1_taco_astronauta_c_o_c/videos/video_1754415603.mp4": {
+    "mtime": 1754415603.0,
+    "seen": 1790574738.3754284,
+    "ast_hash": "c6c7dc73e97c7c1deb64a1bd27accb48",
+    "semantic_hash": "c6c7dc73e97c7c1deb64a1bd27accb48"
+  },
+  "public_html_legacy_20260715/storage/productos/1_taco_cobra_q7/videos/video_1751051115.mp4": {
+    "mtime": 1751051115.0,
+    "seen": 1790574738.3754292,
+    "ast_hash": "b6cc107d676423463aac61b5e5846656",
+    "semantic_hash": "b6cc107d676423463aac61b5e5846656"
+  },
+  "public_html_legacy_20260715/storage/productos/1taco_furia_rosa/videos/video_1750429732.mp4": {
+    "mtime": 1750429732.0,
+    "seen": 1790574738.3754299,
+    "ast_hash": "c36df3a74407167cdf11e4137ffd0469",
+    "semantic_hash": "c36df3a74407167cdf11e4137ffd0469"
+  },
+  "public_html_legacy_20260715/storage/productos/1taco_preoaite_negro/videos/video_1754413982.mp4": {
+    "mtime": 1754413982.0,
+    "seen": 1790574738.3754303,
+    "ast_hash": "c94add94143740e769fd19e09867b25c",
+    "semantic_hash": "c94add94143740e769fd19e09867b25c"
+  },
+  "public_html_legacy_20260715/storage/productos/2taco_negro_cruces_blancas/videos/video_1754420414.mp4": {
+    "mtime": 1754420414.0,
+    "seen": 1790574738.375431,
+    "ast_hash": "892a3d1e32b081c6a46440f926a494e3",
+    "semantic_hash": "892a3d1e32b081c6a46440f926a494e3"
+  },
+  "public_html_legacy_20260715/storage/productos/bolas_collapsar_marmol_negro/videos/FB_VID_4757460026492277635.mp4": {
+    "mtime": 1745104736.0,
+    "seen": 1790574738.3754325,
+    "ast_hash": "74ad06f5d1d4716845988d3a05811fd6",
+    "semantic_hash": "74ad06f5d1d4716845988d3a05811fd6"
+  },
+  "public_html_legacy_20260715/storage/productos/cambio_de_casquillos/videos/20250404_115053.mp4": {
+    "mtime": 1744869459.0,
+    "seen": 1790574738.3754334,
+    "ast_hash": "16fec213feb9604f4258c27799dd78da",
+    "semantic_hash": "16fec213feb9604f4258c27799dd78da"
+  },
+  "public_html_legacy_20260715/storage/productos/taco_gramax/videos/20250423_201231.mp4": {
+    "mtime": 1745457331.0,
+    "seen": 1790574738.3754342,
+    "ast_hash": "9d4d0567b6523b6ec6ba83d81aeaf586",
+    "semantic_hash": "9d4d0567b6523b6ec6ba83d81aeaf586"
+  },
+  "public_html_legacy_20260715/storage/productos/taco_negro_sencillo/videos/video_1752453260.mp4": {
+    "mtime": 1752453260.0,
+    "seen": 1790574738.375435,
+    "ast_hash": "4f9c12b3c9959be3a3a8c5d58ffe0f6e",
+    "semantic_hash": "4f9c12b3c9959be3a3a8c5d58ffe0f6e"
+  },
+  "public_html_legacy_20260715/storage/productos/taco_preoaidr_3_4_2_blanco/videos/20250614_121904.mp4": {
+    "mtime": 1749922434.0,
+    "seen": 1790574738.3754356,
+    "ast_hash": "5f1a45502e8b4e28da9e533c89d9bbdc",
+    "semantic_hash": "5f1a45502e8b4e28da9e533c89d9bbdc"
+  },
+  "public_html_legacy_20260715/storage/productos/virola_escama_de_dragon/images/20250108_132617.mp4": {
+    "mtime": 1744867934.0,
+    "seen": 1790574738.3754363,
+    "ast_hash": "96ff10673ae416c36bb444dce7c28bd6",
+    "semantic_hash": "96ff10673ae416c36bb444dce7c28bd6"
+  }
+}

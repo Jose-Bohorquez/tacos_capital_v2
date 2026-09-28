@@ -1,0 +1,24 @@
+# Credenciales — nunca versionar (repo público en GitHub)
+.env
+.env.*
+
+# Logs
+storage/logs/*.log
+
+# Sistema operativo / IDEs
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+
+# Sitio previo a la migración a MVC (2026-07-15), traía su propio DO_NOT_UPLOAD_HERE en el
+# servidor. No es el código real en producción, solo referencia histórica local — se queda
+# en disco, nunca se versiona.
+public_html_legacy_20260715/
+DO_NOT_UPLOAD_HERE
+
+# Cualquier respaldo/backup/zip que termine acá por error — nunca se versiona.
+*.zip
+*.tar
+*.tar.gz
